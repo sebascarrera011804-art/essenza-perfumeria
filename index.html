@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Essenza Perfumería - Fragancias elegantes para mujer, hombre, niños y sets de regalo."
+    >
+
+    <title>Essenza | Perfumería</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="wrap">
+        <nav>
+            <a class="logo" href="#inicio">
+                ESSENZA
+                <span>PERFUMERÍA</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#categorias">Categorías</a>
+                <a href="#destacados">Más vendidos</a>
+                <a href="#catalogo">Perfumes</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+
+            <button
+                class="cartbtn"
+                id="open"
+                type="button"
+                aria-label="Abrir carrito"
+            >
+                🛒
+                <span>Carrito</span>
+                <b id="count">0</b>
+            </button>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+
+        <div class="hero-overlay"></div>
+
+        <div class="wrap hero-wrap">
+
+            <div class="hero-content">
+
+                <span class="eyebrow">
+                    ESSENZA PERFUMERÍA
+                </span>
+
+                <h1>
+                    Una fragancia.
+                    <br>
+                    <em>Una historia.</em>
+                </h1>
+
+                <p>
+                    Descubre perfumes seleccionados para expresar
+                    tu personalidad, tu estilo y esos momentos
+                    que quieres recordar.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a
+                        class="btn"
+                        href="#catalogo"
+                    >
+                        Explorar colección
+                    </a>
+
+                    <a
+                        class="btn line"
+                        href="#destacados"
+                    >
+                        Ver favoritos
+                    </a>
+
+                </div>
+
+                <div class="hero-trust">
+
+                    <span>✓ Fragancias seleccionadas</span>
+                    <span>✓ Atención personalizada</span>
+                    <span>✓ Regalos especiales</span>
+
+                </div>
+
+            </div>
+
+            <div class="hero-product">
+
+                <div class="hero-glow"></div>
+
+                <img
+                    src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=800&q=85"
+                    alt="Perfume Essenza"
+                >
+
+                <div class="hero-card">
+
+                    <small>
+                        FRAGANCIA DESTACADA
+                    </small>
+
+                    <strong>
+                        Rosa Imperial
+                    </strong>
+
+                    <span>
+                        Rosa · Peonía · Ámbar
+                    </span>
+
+                    <b>
+                        $78
+                    </b>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- BENEFICIOS -->
+    <section class="benefits">
+
+        <div class="wrap benefits-grid">
+
+            <div>
+                <strong>✦</strong>
+                <span>Fragancias seleccionadas</span>
+            </div>
+
+            <div>
+                <strong>✦</strong>
+                <span>Envíos disponibles</span>
+            </div>
+
+            <div>
+                <strong>✦</strong>
+                <span>Atención personalizada</span>
+            </div>
+
+            <div>
+                <strong>✦</strong>
+                <span>Regalos especiales</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORÍAS -->
+    <section id="categorias">
+
+        <div class="wrap">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">
+                    DESCUBRE
+                </span>
+
+                <h2>
+                    Encuentra tu
+                    <em>fragancia ideal</em>
+                </h2>
+
+                <p>
+                    Explora nuestra selección por categoría.
+                </p>
+
+            </div>
+
+            <div
+                class="cats"
+                id="cats"
+            ></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- DESTACADOS -->
+    <section
+        class="featured"
+        id="destacados"
+    >
+
+        <div class="wrap">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">
+                    FAVORITOS
+                </span>
+
+                <h2>
+                    Los más
+                    <em>vendidos</em>
+                </h2>
+
+                <p>
+                    Las fragancias favoritas de nuestros clientes.
+                </p>
+
+            </div>
+
+            <div
+                class="featured-grid"
+                id="featuredGrid"
+            ></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CATÁLOGO -->
+    <section
+        id="catalogo"
+        class="catalog-section"
+    >
+
+        <div class="wrap">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">
+                    COLECCIÓN
+                </span>
+
+                <h2>
+                    Nuestro
+                    <em>catálogo</em>
+                </h2>
+
+            </div>
+
+            <div class="tools">
+
+                <div class="search-box">
+
+                    <span>⌕</span>
+
+                    <input
+                        class="search"
+                        id="q"
+                        type="search"
+                        placeholder="Buscar rosa, vainilla, madera..."
+                        aria-label="Buscar perfumes"
+                    >
+
+                </div>
+
+                <select
+                    id="price"
+                    aria-label="Filtrar por precio"
+                >
+                    <option value="all">
+                        Todos los precios
+                    </option>
+
+                    <option value="0-50">
+                        Hasta $50
+                    </option>
+
+                    <option value="50-90">
+                        $50 a $90
+                    </option>
+
+                    <option value="90-999">
+                        Más de $90
+                    </option>
+                </select>
+
+            </div>
+
+            <div
+                class="chips"
+                id="chips"
+            ></div>
+
+            <div
+                class="grid"
+                id="grid"
+            ></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- NOSOTROS -->
+    <section
+        class="about"
+        id="nosotros"
+    >
+
+        <div class="wrap about-grid">
+
+            <div class="about-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=900&q=85"
+                    alt="Perfumería Essenza"
+                    loading="lazy"
+                >
+
+            </div>
+
+            <div class="about-content">
+
+                <span class="eyebrow">
+                    SOBRE ESSENZA
+                </span>
+
+                <h2>
+                    El aroma también
+                    <em>cuenta tu historia.</em>
+                </h2>
+
+                <p>
+                    En Essenza creemos que una fragancia es mucho
+                    más que un perfume. Es una forma de expresar
+                    quién eres, recordar momentos y crear nuevas
+                    historias.
+                </p>
+
+                <p>
+                    Seleccionamos fragancias para diferentes estilos,
+                    edades y ocasiones, buscando siempre una experiencia
+                    especial para nuestros clientes.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACTO -->
+    <section id="contacto">
+
+        <div class="wrap contact-grid">
+
+            <div class="contact-info">
+
+                <span class="eyebrow">
+                    CONTACTO
+                </span>
+
+                <h2>
+                    ¿Tienes alguna
+                    <em>pregunta?</em>
+                </h2>
+
+                <p>
+                    Escríbenos y estaremos encantados de ayudarte
+                    a encontrar tu próxima fragancia.
+                </p>
+
+                <a
+                    href="https://wa.me/593983098535"
+                    target="_blank"
+                    rel="noopener"
+                    class="contact-whatsapp"
+                >
+                    WhatsApp
+                </a>
+
+            </div>
+
+            <form
+                id="form"
+                class="contact-form"
+                novalidate
+            >
+
+                <label>
+                    Nombre
+
+                    <input
+                        id="nm"
+                        required
+                        autocomplete="name"
+                        placeholder="Tu nombre"
+                    >
+                </label>
+
+                <label>
+                    Correo
+
+                    <input
+                        id="em"
+                        type="email"
+                        required
+                        autocomplete="email"
+                        placeholder="tu@email.com"
+                    >
+                </label>
+
+                <label>
+                    Mensaje
+
+                    <textarea
+                        id="ms"
+                        rows="5"
+                        required
+                        placeholder="¿En qué podemos ayudarte?"
+                    ></textarea>
+                </label>
+
+                <button
+                    class="btn"
+                    type="submit"
+                >
+                    Enviar mensaje
+                </button>
+
+                <div
+                    class="msg"
+                    id="msg"
+                    role="status"
+                ></div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="wrap footer-inner">
+
+        <div>
+            <strong>ESSENZA</strong>
+            <span>PERFUMERÍA</span>
+        </div>
+
+        <p>
+            © 2026 Essenza Perfumería. Todos los derechos reservados.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+<a
+    class="wa"
+    href="https://wa.me/593983098535?text=Hola%20Essenza%2C%20quiero%20informaci%C3%B3n"
+    target="_blank"
+    rel="noopener"
+    aria-label="Escribir por WhatsApp"
+>
+    <span>◔</span>
+</a>
+
+
+<!-- OVERLAY CARRITO -->
+<div
+    class="drawer-overlay"
+    id="drawerOverlay"
+></div>
+
+
+<!-- CARRITO -->
+<aside
+    class="drawer"
+    id="drawer"
+    aria-label="Carrito"
+>
+
+    <div class="drawer-header">
+
+        <div>
+
+            <span class="eyebrow">
+                ESSENZA
+            </span>
+
+            <h3>
+                Tu carrito
+            </h3>
+
+        </div>
+
+        <button
+            id="close"
+            type="button"
+            aria-label="Cerrar carrito"
+        >
+            ×
+        </button>
+
+    </div>
+
+
+    <div id="items"></div>
+
+
+    <div class="cart-footer">
+
+        <div class="total">
+
+            <span>
+                Total
+            </span>
+
+            <strong id="total">
+                $0
+            </strong>
+
+        </div>
+
+        <button
+            class="btn buy-link"
+            id="buy"
+            type="button"
+        >
+            Finalizar compra
+        </button>
+
+        <small>
+            Completa tus datos de entrega para realizar tu pedido.
+        </small>
+
+    </div>
+
+</aside>
+
+
+<!-- MODAL CHECKOUT -->
+<div
+    class="checkout-overlay"
+    id="checkoutOverlay"
+>
+
+    <div
+        class="checkout-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="checkoutTitle"
+    >
+
+        <button
+            class="checkout-close"
+            id="checkoutClose"
+            type="button"
+            aria-label="Cerrar formulario"
+        >
+            ×
+        </button>
+
+        <div class="checkout-header">
+
+            <span class="eyebrow">
+                ESSENZA
+            </span>
+
+            <h2 id="checkoutTitle">
+                Finalizar compra
+            </h2>
+
+            <p>
+                Ingresa tus datos para coordinar la entrega.
+            </p>
+
+        </div>
+
+
+        <form
+            id="checkoutForm"
+            class="checkout-form"
+            novalidate
+        >
+
+            <div class="form-row">
+
+                <label>
+                    Nombre completo *
+
+                    <input
+                        id="customerName"
+                        type="text"
+                        placeholder="Ej. Sebastián Carrera"
+                        autocomplete="name"
+                        required
+                    >
+                </label>
+
+                <label>
+                    Teléfono *
+
+                    <input
+                        id="customerPhone"
+                        type="tel"
+                        placeholder="Ej. 0987654321"
+                        autocomplete="tel"
+                        required
+                    >
+                </label>
+
+            </div>
+
+
+            <label>
+                Dirección de entrega *
+
+                <input
+                    id="customerAddress"
+                    type="text"
+                    placeholder="Calle principal, número y calle secundaria"
+                    autocomplete="street-address"
+                    required
+                >
+            </label>
+
+
+            <div class="form-row">
+
+                <label>
+                    Ciudad *
+
+                    <select
+                        id="customerCity"
+                        required
+                    >
+                        <option value="">
+                            Selecciona una ciudad
+                        </option>
+
+                        <option value="Quito">
+                            Quito
+                        </option>
+
+                        <option value="Guayaquil">
+                            Guayaquil
+                        </option>
+
+                        <option value="Cuenca">
+                            Cuenca
+                        </option>
+
+                        <option value="Ambato">
+                            Ambato
+                        </option>
+
+                        <option value="Riobamba">
+                            Riobamba
+                        </option>
+
+                        <option value="Santo Domingo">
+                            Santo Domingo
+                        </option>
+
+                        <option value="Ibarra">
+                            Ibarra
+                        </option>
+
+                        <option value="Otra ciudad">
+                            Otra ciudad
+                        </option>
+
+                    </select>
+                </label>
+
+
+                <label>
+                    Sector
+
+                    <input
+                        id="customerSector"
+                        type="text"
+                        placeholder="Ej. Cumbayá"
+                    >
+                </label>
+
+            </div>
+
+
+            <label>
+                Referencia de entrega
+
+                <textarea
+                    id="customerReference"
+                    rows="2"
+                    placeholder="Ej. Casa blanca junto al parque..."
+                ></textarea>
+            </label>
+
+
+            <label>
+                Método de pago *
+
+                <select
+                    id="paymentMethod"
+                    required
+                >
+                    <option value="">
+                        Selecciona una opción
+                    </option>
+
+                    <option value="Transferencia bancaria">
+                        Transferencia bancaria
+                    </option>
+
+                    <option value="Pago contra entrega">
+                        Pago contra entrega
+                    </option>
+
+                </select>
+            </label>
+
+
+            <div
+                class="checkout-summary"
+                id="checkoutSummary"
+            ></div>
+
+
+            <div
+                class="checkout-error"
+                id="checkoutError"
+            ></div>
+
+
+            <button
+                class="btn checkout-submit"
+                type="submit"
+            >
+                Confirmar compra
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- MODAL ÉXITO -->
+<div
+    class="success-overlay"
+    id="successOverlay"
+>
+
+    <div class="success-modal">
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <span class="eyebrow">
+            ESSENZA PERFUMERÍA
+        </span>
+
+        <h2>
+            ¡Compra realizada con éxito!
+        </h2>
+
+        <p>
+            Gracias por tu compra. Hemos recibido tu pedido
+            correctamente.
+        </p>
+
+        <p class="success-small">
+            Ahora puedes enviarnos los detalles por WhatsApp
+            para coordinar tu entrega.
+        </p>
+
+        <div class="success-actions">
+
+            <a
+                id="successWhatsapp"
+                class="btn"
+                href="#"
+                target="_blank"
+                rel="noopener"
+            >
+                Enviar pedido por WhatsApp
+            </a>
+
+            <button
+                id="successClose"
+                class="btn line"
+                type="button"
+            >
+                Seguir comprando
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

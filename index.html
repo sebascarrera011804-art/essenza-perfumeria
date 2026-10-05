@@ -24,6 +24,7 @@
 <header class="header">
     <div class="wrap">
         <nav>
+
             <a class="logo" href="#inicio">
                 ESSENZA
                 <span>PERFUMERÍA</span>
@@ -44,13 +45,15 @@
                 type="button"
                 aria-label="Abrir carrito"
             >
-                🛒
+                <span class="cart-icon">🛒</span>
                 <span>Carrito</span>
                 <b id="count">0</b>
             </button>
+
         </nav>
     </div>
 </header>
+
 
 <main>
 
@@ -81,31 +84,24 @@
 
                 <div class="hero-buttons">
 
-                    <a
-                        class="btn"
-                        href="#catalogo"
-                    >
+                    <a class="btn" href="#catalogo">
                         Explorar colección
                     </a>
 
-                    <a
-                        class="btn line"
-                        href="#destacados"
-                    >
+                    <a class="btn line" href="#destacados">
                         Ver favoritos
                     </a>
 
                 </div>
 
                 <div class="hero-trust">
-
                     <span>✓ Fragancias seleccionadas</span>
+                    <span>✓ Envíos disponibles</span>
                     <span>✓ Atención personalizada</span>
-                    <span>✓ Regalos especiales</span>
-
                 </div>
 
             </div>
+
 
             <div class="hero-product">
 
@@ -113,7 +109,7 @@
 
                 <img
                     src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=800&q=85"
-                    alt="Perfume Essenza"
+                    alt="Perfume destacado Essenza"
                 >
 
                 <div class="hero-card">
@@ -148,22 +144,22 @@
 
         <div class="wrap benefits-grid">
 
-            <div>
+            <div class="benefit">
                 <strong>✦</strong>
                 <span>Fragancias seleccionadas</span>
             </div>
 
-            <div>
+            <div class="benefit">
                 <strong>✦</strong>
                 <span>Envíos disponibles</span>
             </div>
 
-            <div>
+            <div class="benefit">
                 <strong>✦</strong>
                 <span>Atención personalizada</span>
             </div>
 
-            <div>
+            <div class="benefit">
                 <strong>✦</strong>
                 <span>Regalos especiales</span>
             </div>
@@ -195,10 +191,7 @@
 
             </div>
 
-            <div
-                class="cats"
-                id="cats"
-            ></div>
+            <div class="cats" id="cats"></div>
 
         </div>
 
@@ -206,10 +199,7 @@
 
 
     <!-- DESTACADOS -->
-    <section
-        class="featured"
-        id="destacados"
-    >
+    <section class="featured" id="destacados">
 
         <div class="wrap">
 
@@ -230,10 +220,7 @@
 
             </div>
 
-            <div
-                class="featured-grid"
-                id="featuredGrid"
-            ></div>
+            <div class="featured-grid" id="featuredGrid"></div>
 
         </div>
 
@@ -241,10 +228,7 @@
 
 
     <!-- CATÁLOGO -->
-    <section
-        id="catalogo"
-        class="catalog-section"
-    >
+    <section id="catalogo" class="catalog-section">
 
         <div class="wrap">
 
@@ -259,7 +243,12 @@
                     <em>catálogo</em>
                 </h2>
 
+                <p>
+                    Encuentra la fragancia perfecta para ti.
+                </p>
+
             </div>
+
 
             <div class="tools">
 
@@ -277,10 +266,8 @@
 
                 </div>
 
-                <select
-                    id="price"
-                    aria-label="Filtrar por precio"
-                >
+                <select id="price" aria-label="Filtrar por precio">
+
                     <option value="all">
                         Todos los precios
                     </option>
@@ -296,19 +283,15 @@
                     <option value="90-999">
                         Más de $90
                     </option>
+
                 </select>
 
             </div>
 
-            <div
-                class="chips"
-                id="chips"
-            ></div>
 
-            <div
-                class="grid"
-                id="grid"
-            ></div>
+            <div class="chips" id="chips"></div>
+
+            <div class="grid" id="grid"></div>
 
         </div>
 
@@ -316,10 +299,7 @@
 
 
     <!-- NOSOTROS -->
-    <section
-        class="about"
-        id="nosotros"
-    >
+    <section class="about" id="nosotros">
 
         <div class="wrap about-grid">
 
@@ -331,7 +311,13 @@
                     loading="lazy"
                 >
 
+                <div class="about-badge">
+                    <strong>ESSENZA</strong>
+                    <span>Desde 2026</span>
+                </div>
+
             </div>
+
 
             <div class="about-content">
 
@@ -356,6 +342,14 @@
                     edades y ocasiones, buscando siempre una experiencia
                     especial para nuestros clientes.
                 </p>
+
+                <div class="about-points">
+
+                    <span>✓ Selección especial</span>
+                    <span>✓ Atención personalizada</span>
+                    <span>✓ Opciones para regalar</span>
+
+                </div>
 
             </div>
 
@@ -391,10 +385,12 @@
                     rel="noopener"
                     class="contact-whatsapp"
                 >
-                    WhatsApp
+                    <span>WhatsApp</span>
+                    <small>Habla con nosotros</small>
                 </a>
 
             </div>
+
 
             <form
                 id="form"
@@ -436,10 +432,7 @@
                     ></textarea>
                 </label>
 
-                <button
-                    class="btn"
-                    type="submit"
-                >
+                <button class="btn" type="submit">
                     Enviar mensaje
                 </button>
 
@@ -458,17 +451,26 @@
 </main>
 
 
+<!-- FOOTER -->
 <footer>
 
     <div class="wrap footer-inner">
 
-        <div>
+        <div class="footer-brand">
             <strong>ESSENZA</strong>
             <span>PERFUMERÍA</span>
         </div>
 
+        <div class="footer-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+
         <p>
-            © 2026 Essenza Perfumería. Todos los derechos reservados.
+            © 2026 Essenza Perfumería.
+            Todos los derechos reservados.
         </p>
 
     </div>
@@ -561,7 +563,7 @@
 </aside>
 
 
-<!-- MODAL CHECKOUT -->
+<!-- CHECKOUT -->
 <div
     class="checkout-overlay"
     id="checkoutOverlay"
@@ -653,10 +655,8 @@
                 <label>
                     Ciudad *
 
-                    <select
-                        id="customerCity"
-                        required
-                    >
+                    <select id="customerCity" required>
+
                         <option value="">
                             Selecciona una ciudad
                         </option>
@@ -718,6 +718,7 @@
                     rows="2"
                     placeholder="Ej. Casa blanca junto al parque..."
                 ></textarea>
+
             </label>
 
 
@@ -728,6 +729,7 @@
                     id="paymentMethod"
                     required
                 >
+
                     <option value="">
                         Selecciona una opción
                     </option>
@@ -741,6 +743,7 @@
                     </option>
 
                 </select>
+
             </label>
 
 
@@ -770,13 +773,22 @@
 </div>
 
 
-<!-- MODAL ÉXITO -->
+<!-- COMPRA EXITOSA -->
 <div
     class="success-overlay"
     id="successOverlay"
 >
 
     <div class="success-modal">
+
+        <button
+            class="success-close"
+            id="successClose"
+            type="button"
+            aria-label="Cerrar"
+        >
+            ×
+        </button>
 
         <div class="success-icon">
             ✓
@@ -813,7 +825,7 @@
             </a>
 
             <button
-                id="successClose"
+                id="successContinue"
                 class="btn line"
                 type="button"
             >

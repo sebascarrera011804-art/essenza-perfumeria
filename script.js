@@ -360,6 +360,7 @@ function render() {
 
                         </div>
 
+
                         <div class="in">
 
                             <small>
@@ -442,6 +443,10 @@ function getCartCount() {
 }
 
 
+/* =====================================================
+   RENDER CARRITO
+===================================================== */
+
 function renderCart() {
 
     const ids = Object.keys(cart);
@@ -470,7 +475,9 @@ function renderCart() {
                 .map(index => {
 
                     const product = P[index];
-                    const quantity = cart[index];
+
+                    const quantity =
+                        cart[index];
 
                     const subtotal =
                         product.p * quantity;
@@ -479,7 +486,17 @@ function renderCart() {
                     return `
                         <div class="it">
 
-                            <div>
+                            <img
+                                class="cart-image"
+                                src="${product.image}"
+                                alt="${product.n}"
+                            >
+
+                            <div class="cart-product">
+
+                                <span class="cart-category">
+                                    ${product.c}
+                                </span>
 
                                 <strong>
                                     ${product.n}
@@ -511,7 +528,7 @@ function renderCart() {
 
                             </div>
 
-                            <span>
+                            <span class="cart-price">
                                 ${money(subtotal)}
                             </span>
 
@@ -543,12 +560,13 @@ function renderCart() {
 
 
 /* =====================================================
-   RESUMEN DEL CHECKOUT
+   RESUMEN CHECKOUT
 ===================================================== */
 
 function renderCheckoutSummary() {
 
     const ids = Object.keys(cart);
+
 
     let html = `
         <h3>
@@ -560,7 +578,10 @@ function renderCheckoutSummary() {
     ids.forEach(index => {
 
         const product = P[index];
-        const quantity = cart[index];
+
+        const quantity =
+            cart[index];
+
 
         html += `
             <div class="summary-item">
@@ -601,7 +622,7 @@ function renderCheckoutSummary() {
 
 
 /* =====================================================
-   CARRITO - ABRIR / CERRAR
+   CARRITO ABRIR / CERRAR
 ===================================================== */
 
 const drawer =
@@ -614,6 +635,7 @@ const overlay =
 function openCart() {
 
     drawer.classList.add('open');
+
     overlay.classList.add('open');
 
     document.body.style.overflow =
@@ -625,6 +647,7 @@ function openCart() {
 function closeCart() {
 
     drawer.classList.remove('open');
+
     overlay.classList.remove('open');
 
     document.body.style.overflow =
@@ -633,16 +656,22 @@ function closeCart() {
 }
 
 
-$('open').onclick =
-    openCart;
+$('open').addEventListener(
+    'click',
+    openCart
+);
 
 
-$('close').onclick =
-    closeCart;
+$('close').addEventListener(
+    'click',
+    closeCart
+);
 
 
-overlay.onclick =
-    closeCart;
+overlay.addEventListener(
+    'click',
+    closeCart
+);
 
 
 /* =====================================================
@@ -656,9 +685,7 @@ const checkoutOverlay =
 function openCheckout() {
 
     if (!Object.keys(cart).length) {
-
         return;
-
     }
 
 
@@ -705,214 +732,238 @@ $('checkoutClose').addEventListener(
 ===================================================== */
 
 $('checkoutForm')
-    .addEventListener('submit', event => {
+    .addEventListener(
+        'submit',
+        event => {
 
-        event.preventDefault();
-
-
-        const name =
-            $('customerName')
-                .value
-                .trim();
+            event.preventDefault();
 
 
-        const phone =
-            $('customerPhone')
-                .value
-                .trim();
+            const name =
+                $('customerName')
+                    .value
+                    .trim();
 
 
-        const address =
-            $('customerAddress')
-                .value
-                .trim();
+            const phone =
+                $('customerPhone')
+                    .value
+                    .trim();
 
 
-        const city =
-            $('customerCity')
-                .value;
+            const address =
+                $('customerAddress')
+                    .value
+                    .trim();
 
 
-        const sector =
-            $('customerSector')
-                .value
-                .trim();
+            const city =
+                $('customerCity')
+                    .value;
 
 
-        const reference =
-            $('customerReference')
-                .value
-                .trim();
+            const sector =
+                $('customerSector')
+                    .value
+                    .trim();
 
 
-        const payment =
-            $('paymentMethod')
-                .value;
+            const reference =
+                $('customerReference')
+                    .value
+                    .trim();
 
 
-        const error =
-            $('checkoutError');
+            const payment =
+                $('paymentMethod')
+                    .value;
 
 
-        if (
-            !name ||
-            !phone ||
-            !address ||
-            !city ||
-            !payment
-        ) {
-
-            error.textContent =
-                'Por favor completa todos los campos obligatorios marcados con *.';
-
-            error.classList.add('show');
-
-            return;
-
-        }
+            const error =
+                $('checkoutError');
 
 
-        if (
-            phone.replace(/\D/g, '').length < 7
-        ) {
+            if (
+                !name ||
+                !phone ||
+                !address ||
+                !city ||
+                !payment
+            ) {
 
-            error.textContent =
-                'Ingresa un número de teléfono válido.';
+                error.textContent =
+                    'Por favor completa todos los campos obligatorios marcados con *.';
 
-            error.classList.add('show');
+                error.classList.add('show');
 
-            return;
-
-        }
-
-
-        error.classList.remove('show');
-
-
-        /* CREAR MENSAJE WHATSAPP */
-
-        const ids =
-            Object.keys(cart);
+                return;
+            }
 
 
-        let message =
-            `🛍️ *NUEVO PEDIDO - ESSENZA*`;
+            const cleanPhone =
+                phone.replace(/\D/g, '');
 
 
-        message +=
-            `\n\n*CLIENTE*`;
+            if (cleanPhone.length < 7) {
+
+                error.textContent =
+                    'Ingresa un número de teléfono válido.';
+
+                error.classList.add('show');
+
+                return;
+            }
 
 
-        message +=
-            `\nNombre: ${name}`;
+            error.classList.remove('show');
 
 
-        message +=
-            `\nTeléfono: ${phone}`;
+            /* CREAR MENSAJE WHATSAPP */
+
+            const ids =
+                Object.keys(cart);
 
 
-        message +=
-            `\n\n*ENTREGA*`;
+            let message =
+                '🛍️ *NUEVO PEDIDO - ESSENZA*';
 
-
-        message +=
-            `\nCiudad: ${city}`;
-
-
-        if (sector) {
 
             message +=
-                `\nSector: ${sector}`;
+                '\n\n*CLIENTE*';
 
-        }
-
-
-        message +=
-            `\nDirección: ${address}`;
-
-
-        if (reference) {
 
             message +=
-                `\nReferencia: ${reference}`;
+                `\nNombre: ${name}`;
 
-        }
-
-
-        message +=
-            `\n\n*MÉTODO DE PAGO*`;
-
-
-        message +=
-            `\n${payment}`;
-
-
-        message +=
-            `\n\n*PRODUCTOS*`;
-
-
-        ids.forEach(index => {
-
-            const product = P[index];
-            const quantity = cart[index];
 
             message +=
-                `\n• ${quantity} x ${product.n} - ${money(product.p * quantity)}`;
-
-        });
+                `\nTeléfono: ${phone}`;
 
 
-        message +=
-            `\n\n*TOTAL: ${money(getCartTotal())}*`;
+            message +=
+                '\n\n*ENTREGA*';
 
 
-        const whatsappURL =
-            `https://wa.me/${PHONE}?text=${encodeURIComponent(message)}`;
+            message +=
+                `\nCiudad: ${city}`;
 
 
-        $('successWhatsapp').href =
-            whatsappURL;
+            if (sector) {
+
+                message +=
+                    `\nSector: ${sector}`;
+
+            }
 
 
-        /* CERRAR CHECKOUT */
-
-        closeCheckout();
-
-
-        /* MOSTRAR ÉXITO */
-
-        $('successOverlay')
-            .classList.add('open');
+            message +=
+                `\nDirección: ${address}`;
 
 
-        /* VACIAR CARRITO */
+            if (reference) {
 
-        cart = {};
+                message +=
+                    `\nReferencia: ${reference}`;
 
-        renderCart();
+            }
 
 
-        /* LIMPIAR FORMULARIO */
+            message +=
+                '\n\n*MÉTODO DE PAGO*';
 
-        $('checkoutForm').reset();
 
-    });
+            message +=
+                `\n${payment}`;
+
+
+            message +=
+                '\n\n*PRODUCTOS*';
+
+
+            ids.forEach(index => {
+
+                const product =
+                    P[index];
+
+                const quantity =
+                    cart[index];
+
+
+                message +=
+                    `\n• ${quantity} x ${product.n} - ${money(product.p * quantity)}`;
+
+            });
+
+
+            message +=
+                `\n\n*TOTAL: ${money(getCartTotal())}*`;
+
+
+            const whatsappURL =
+                `https://wa.me/${PHONE}?text=${encodeURIComponent(message)}`;
+
+
+            $('successWhatsapp').href =
+                whatsappURL;
+
+
+            /* CERRAR CHECKOUT */
+
+            closeCheckout();
+
+
+            /* MOSTRAR ÉXITO */
+
+            $('successOverlay')
+                .classList.add('open');
+
+
+            document.body.style.overflow =
+                'hidden';
+
+
+            /* VACIAR CARRITO */
+
+            cart = {};
+
+            renderCart();
+
+
+            /* LIMPIAR FORMULARIO */
+
+            $('checkoutForm').reset();
+
+        }
+    );
 
 
 /* =====================================================
    MODAL ÉXITO
 ===================================================== */
 
+function closeSuccess() {
+
+    $('successOverlay')
+        .classList.remove('open');
+
+    document.body.style.overflow =
+        '';
+
+}
+
+
 $('successClose')
-    .addEventListener('click', () => {
+    .addEventListener(
+        'click',
+        closeSuccess
+    );
 
-        $('successOverlay')
-            .classList.remove('open');
 
-        document.body.style.overflow =
-            '';
-
-    });
+$('successContinue')
+    .addEventListener(
+        'click',
+        closeSuccess
+    );
 
 
 /* =====================================================
@@ -966,7 +1017,7 @@ document.addEventListener(
         }
 
 
-        /* AGREGAR */
+        /* AGREGAR PRODUCTO */
 
         if (
             button.classList.contains('add')
@@ -987,7 +1038,7 @@ document.addEventListener(
         }
 
 
-        /* DESTACADO */
+        /* PRODUCTO DESTACADO */
 
         if (
             button.dataset.featured !== undefined
@@ -1008,7 +1059,7 @@ document.addEventListener(
         }
 
 
-        /* CANTIDAD */
+        /* CAMBIAR CANTIDAD */
 
         if (
             button.dataset.d !== undefined
@@ -1072,7 +1123,7 @@ $('price').addEventListener(
 
 
 /* =====================================================
-   FORMULARIO DE CONTACTO
+   FORMULARIO CONTACTO
 ===================================================== */
 
 $('form').addEventListener(
@@ -1083,15 +1134,21 @@ $('form').addEventListener(
 
 
         const name =
-            $('nm').value.trim();
+            $('nm')
+                .value
+                .trim();
 
 
         const email =
-            $('em').value.trim();
+            $('em')
+                .value
+                .trim();
 
 
         const message =
-            $('ms').value.trim();
+            $('ms')
+                .value
+                .trim();
 
 
         const validEmail =
@@ -1124,7 +1181,7 @@ $('form').addEventListener(
 
 
 /* =====================================================
-   ESCAPE
+   CERRAR CON ESCAPE
 ===================================================== */
 
 document.addEventListener(
@@ -1136,13 +1193,10 @@ document.addEventListener(
         ) {
 
             closeCart();
+
             closeCheckout();
 
-            $('successOverlay')
-                .classList.remove('open');
-
-            document.body.style.overflow =
-                '';
+            closeSuccess();
 
         }
 

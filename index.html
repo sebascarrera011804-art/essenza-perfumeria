@@ -45,7 +45,7 @@
                 type="button"
                 aria-label="Abrir carrito"
             >
-                <span class="cart-icon">🛒</span>
+                🛒
                 <span>Carrito</span>
                 <b id="count">0</b>
             </button>
@@ -57,7 +57,10 @@
 
 <main>
 
-    <!-- HERO -->
+    <!-- =========================
+         HERO
+    ========================== -->
+
     <section class="hero" id="inicio">
 
         <div class="hero-overlay"></div>
@@ -96,8 +99,8 @@
 
                 <div class="hero-trust">
                     <span>✓ Fragancias seleccionadas</span>
-                    <span>✓ Envíos disponibles</span>
                     <span>✓ Atención personalizada</span>
+                    <span>✓ Regalos especiales</span>
                 </div>
 
             </div>
@@ -109,7 +112,7 @@
 
                 <img
                     src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=800&q=85"
-                    alt="Perfume destacado Essenza"
+                    alt="Perfume Rosa Imperial"
                 >
 
                 <div class="hero-card">
@@ -139,7 +142,10 @@
     </section>
 
 
-    <!-- BENEFICIOS -->
+    <!-- =========================
+         BENEFICIOS
+    ========================== -->
+
     <section class="benefits">
 
         <div class="wrap benefits-grid">
@@ -169,7 +175,10 @@
     </section>
 
 
-    <!-- CATEGORÍAS -->
+    <!-- =========================
+         CATEGORÍAS
+    ========================== -->
+
     <section id="categorias">
 
         <div class="wrap">
@@ -198,7 +207,10 @@
     </section>
 
 
-    <!-- DESTACADOS -->
+    <!-- =========================
+         DESTACADOS
+    ========================== -->
+
     <section class="featured" id="destacados">
 
         <div class="wrap">
@@ -227,7 +239,10 @@
     </section>
 
 
-    <!-- CATÁLOGO -->
+    <!-- =========================
+         CATÁLOGO
+    ========================== -->
+
     <section id="catalogo" class="catalog-section">
 
         <div class="wrap">
@@ -242,10 +257,6 @@
                     Nuestro
                     <em>catálogo</em>
                 </h2>
-
-                <p>
-                    Encuentra la fragancia perfecta para ti.
-                </p>
 
             </div>
 
@@ -298,7 +309,10 @@
     </section>
 
 
-    <!-- NOSOTROS -->
+    <!-- =========================
+         NOSOTROS
+    ========================== -->
+
     <section class="about" id="nosotros">
 
         <div class="wrap about-grid">
@@ -311,13 +325,7 @@
                     loading="lazy"
                 >
 
-                <div class="about-badge">
-                    <strong>ESSENZA</strong>
-                    <span>Desde 2026</span>
-                </div>
-
             </div>
-
 
             <div class="about-content">
 
@@ -343,14 +351,6 @@
                     especial para nuestros clientes.
                 </p>
 
-                <div class="about-points">
-
-                    <span>✓ Selección especial</span>
-                    <span>✓ Atención personalizada</span>
-                    <span>✓ Opciones para regalar</span>
-
-                </div>
-
             </div>
 
         </div>
@@ -358,7 +358,10 @@
     </section>
 
 
-    <!-- CONTACTO -->
+    <!-- =========================
+         CONTACTO
+    ========================== -->
+
     <section id="contacto">
 
         <div class="wrap contact-grid">
@@ -385,18 +388,13 @@
                     rel="noopener"
                     class="contact-whatsapp"
                 >
-                    <span>WhatsApp</span>
-                    <small>Habla con nosotros</small>
+                    WhatsApp
                 </a>
 
             </div>
 
 
-            <form
-                id="form"
-                class="contact-form"
-                novalidate
-            >
+            <form id="form" class="contact-form" novalidate>
 
                 <label>
                     Nombre
@@ -451,26 +449,23 @@
 </main>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================== -->
+
 <footer>
 
     <div class="wrap footer-inner">
 
         <div class="footer-brand">
+
             <strong>ESSENZA</strong>
             <span>PERFUMERÍA</span>
-        </div>
 
-        <div class="footer-links">
-            <a href="#inicio">Inicio</a>
-            <a href="#catalogo">Catálogo</a>
-            <a href="#nosotros">Nosotros</a>
-            <a href="#contacto">Contacto</a>
         </div>
 
         <p>
-            © 2026 Essenza Perfumería.
-            Todos los derechos reservados.
+            © 2026 Essenza Perfumería. Todos los derechos reservados.
         </p>
 
     </div>
@@ -478,7 +473,10 @@
 </footer>
 
 
-<!-- WHATSAPP -->
+<!-- =========================
+     WHATSAPP
+========================== -->
+
 <a
     class="wa"
     href="https://wa.me/593983098535?text=Hola%20Essenza%2C%20quiero%20informaci%C3%B3n"
@@ -490,14 +488,20 @@
 </a>
 
 
-<!-- OVERLAY CARRITO -->
+<!-- =========================
+     OVERLAY CARRITO
+========================== -->
+
 <div
     class="drawer-overlay"
     id="drawerOverlay"
 ></div>
 
 
-<!-- CARRITO -->
+<!-- =========================
+     CARRITO
+========================== -->
+
 <aside
     class="drawer"
     id="drawer"
@@ -563,7 +567,126 @@
 </aside>
 
 
-<!-- CHECKOUT -->
+<!-- =========================
+     MODAL DETALLE PRODUCTO
+========================== -->
+
+<div
+    class="product-overlay"
+    id="productOverlay"
+>
+
+    <div
+        class="product-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="productModalTitle"
+    >
+
+        <button
+            class="product-close"
+            id="productClose"
+            type="button"
+            aria-label="Cerrar producto"
+        >
+            ×
+        </button>
+
+
+        <div class="product-modal-image">
+
+            <img
+                id="productModalImage"
+                src=""
+                alt=""
+            >
+
+            <span
+                class="product-modal-tag"
+                id="productModalTag"
+            ></span>
+
+        </div>
+
+
+        <div class="product-modal-content">
+
+            <span
+                class="product-modal-category"
+                id="productModalCategory"
+            ></span>
+
+            <h2 id="productModalTitle">
+                Perfume
+            </h2>
+
+            <p
+                class="product-modal-notes"
+                id="productModalNotes"
+            ></p>
+
+            <p
+                class="product-modal-description"
+                id="productModalDescription"
+            ></p>
+
+
+            <div class="product-details">
+
+                <div>
+                    <span>TAMAÑO</span>
+                    <strong id="productModalSize">
+                        100 ml
+                    </strong>
+                </div>
+
+                <div>
+                    <span>FRAGANCIA</span>
+                    <strong id="productModalFamily">
+                        Exclusiva
+                    </strong>
+                </div>
+
+                <div>
+                    <span>DISPONIBILIDAD</span>
+                    <strong class="available">
+                        Disponible
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="product-modal-bottom">
+
+                <strong
+                    class="product-modal-price"
+                    id="productModalPrice"
+                >
+                    $0
+                </strong>
+
+                <button
+                    class="btn"
+                    id="productModalAdd"
+                    type="button"
+                >
+                    Agregar al carrito
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     MODAL CHECKOUT
+========================== -->
+
 <div
     class="checkout-overlay"
     id="checkoutOverlay"
@@ -584,6 +707,7 @@
         >
             ×
         </button>
+
 
         <div class="checkout-header">
 
@@ -694,6 +818,7 @@
                         </option>
 
                     </select>
+
                 </label>
 
 
@@ -718,17 +843,13 @@
                     rows="2"
                     placeholder="Ej. Casa blanca junto al parque..."
                 ></textarea>
-
             </label>
 
 
             <label>
                 Método de pago *
 
-                <select
-                    id="paymentMethod"
-                    required
-                >
+                <select id="paymentMethod" required>
 
                     <option value="">
                         Selecciona una opción
@@ -773,22 +894,16 @@
 </div>
 
 
-<!-- COMPRA EXITOSA -->
+<!-- =========================
+     MODAL ÉXITO
+========================== -->
+
 <div
     class="success-overlay"
     id="successOverlay"
 >
 
     <div class="success-modal">
-
-        <button
-            class="success-close"
-            id="successClose"
-            type="button"
-            aria-label="Cerrar"
-        >
-            ×
-        </button>
 
         <div class="success-icon">
             ✓
@@ -825,7 +940,7 @@
             </a>
 
             <button
-                id="successContinue"
+                id="successClose"
                 class="btn line"
                 type="button"
             >

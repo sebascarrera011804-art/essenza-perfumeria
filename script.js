@@ -55,7 +55,7 @@ const P = [
         c: 'Hombre',
         p: 135,
         t: 'Bergamota, ambroxan, elemi y maderas',
-        image: 'img/sauvage.jpg',
+        image: 'img/SUAVAGE.jpg',
         tag: 'MÁS VENDIDO'
     },
 

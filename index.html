@@ -21,6 +21,9 @@
 
 <body>
 
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+
 <header class="header">
     <div class="wrap">
         <nav>
@@ -30,7 +33,7 @@
                 <span>PERFUMERÍA</span>
             </a>
 
-            <div class="nav-links">
+            <div class="nav-links" id="navLinks">
                 <a href="#inicio">Inicio</a>
                 <a href="#categorias">Categorías</a>
                 <a href="#destacados">Más vendidos</a>
@@ -39,23 +42,48 @@
                 <a href="#contacto">Contacto</a>
             </div>
 
-            <button
-                class="cartbtn"
-                id="open"
-                type="button"
-                aria-label="Abrir carrito"
-            >
-                🛒
-                <span>Carrito</span>
-                <b id="count">0</b>
-            </button>
+            <div class="nav-actions">
+
+                <button
+                    class="accountbtn"
+                    id="accountBtn"
+                    type="button"
+                    aria-label="Ingresar o crear cuenta"
+                >
+                    <span aria-hidden="true">👤</span>
+                    <span id="accountLabel">Ingresar</span>
+                </button>
+
+                <button
+                    class="cartbtn"
+                    id="open"
+                    type="button"
+                    aria-label="Abrir carrito"
+                >
+                    🛒
+                    <span>Carrito</span>
+                    <b id="count">0</b>
+                </button>
+
+                <button
+                    class="menubtn"
+                    id="menuBtn"
+                    type="button"
+                    aria-label="Abrir menú"
+                    aria-expanded="false"
+                    aria-controls="navLinks"
+                >
+                    ☰
+                </button>
+
+            </div>
 
         </nav>
     </div>
 </header>
 
 
-<main>
+<main id="main">
 
     <!-- =========================
          HERO
@@ -111,26 +139,27 @@
                 <div class="hero-glow"></div>
 
                 <img
-                    src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=800&q=85"
-                    alt="Perfume Rosa Imperial"
+                    src="img/libre.jpg"
+                    alt="Perfume Libre de Yves Saint Laurent"
+                    data-open="2"
                 >
 
-                <div class="hero-card">
+                <div class="hero-card" data-open="2">
 
                     <small>
                         FRAGANCIA DESTACADA
                     </small>
 
                     <strong>
-                        Rosa Imperial
+                        Libre
                     </strong>
 
                     <span>
-                        Rosa · Peonía · Ámbar
+                        Lavanda · Azahar · Vainilla
                     </span>
 
-                    <b>
-                        $78
+                    <b id="heroPrice">
+                        $125
                     </b>
 
                 </div>
@@ -278,23 +307,11 @@
                 </div>
 
                 <select id="price" aria-label="Filtrar por precio">
-
-                    <option value="all">
-                        Todos los precios
-                    </option>
-
-                    <option value="0-50">
-                        Hasta $50
-                    </option>
-
-                    <option value="50-90">
-                        $50 a $90
-                    </option>
-
-                    <option value="90-999">
-                        Más de $90
-                    </option>
-
+                    <option value="all">Todos los precios</option>
+                    <option value="0-60">Hasta $60</option>
+                    <option value="61-100">$61 a $100</option>
+                    <option value="101-150">$101 a $150</option>
+                    <option value="151-999">Más de $150</option>
                 </select>
 
             </div>
@@ -464,6 +481,12 @@
 
         </div>
 
+        <nav class="footer-links" aria-label="Enlaces del pie de página">
+            <button type="button" class="link-btn" data-open-track>Rastrear mi pedido</button>
+            <a href="#contacto">Contacto</a>
+            <a href="#catalogo">Catálogo</a>
+        </nav>
+
         <p>
             © 2026 Essenza Perfumería. Todos los derechos reservados.
         </p>
@@ -559,7 +582,7 @@
         </button>
 
         <small>
-            Completa tus datos de entrega para realizar tu pedido.
+            En el siguiente paso eliges tu forma de pago.
         </small>
 
     </div>
@@ -649,7 +672,7 @@
 
                 <div>
                     <span>DISPONIBILIDAD</span>
-                    <strong class="available">
+                    <strong class="available" id="productModalStock">
                         Disponible
                     </strong>
                 </div>
@@ -732,6 +755,10 @@
             novalidate
         >
 
+            <div class="checkout-account" id="checkoutAccount"></div>
+
+            <h3 class="form-step"><span>1</span> Tus datos</h3>
+
             <div class="form-row">
 
                 <label>
@@ -752,6 +779,7 @@
                     <input
                         id="customerPhone"
                         type="tel"
+                        inputmode="tel"
                         placeholder="Ej. 0987654321"
                         autocomplete="tel"
                         required
@@ -760,6 +788,8 @@
 
             </div>
 
+
+            <h3 class="form-step"><span>2</span> Entrega</h3>
 
             <label>
                 Dirección de entrega *
@@ -773,54 +803,13 @@
                 >
             </label>
 
-
             <div class="form-row">
 
                 <label>
                     Ciudad *
 
-                    <select id="customerCity" required>
-
-                        <option value="">
-                            Selecciona una ciudad
-                        </option>
-
-                        <option value="Quito">
-                            Quito
-                        </option>
-
-                        <option value="Guayaquil">
-                            Guayaquil
-                        </option>
-
-                        <option value="Cuenca">
-                            Cuenca
-                        </option>
-
-                        <option value="Ambato">
-                            Ambato
-                        </option>
-
-                        <option value="Riobamba">
-                            Riobamba
-                        </option>
-
-                        <option value="Santo Domingo">
-                            Santo Domingo
-                        </option>
-
-                        <option value="Ibarra">
-                            Ibarra
-                        </option>
-
-                        <option value="Otra ciudad">
-                            Otra ciudad
-                        </option>
-
-                    </select>
-
+                    <select id="customerCity" required></select>
                 </label>
-
 
                 <label>
                     Sector
@@ -834,7 +823,6 @@
 
             </div>
 
-
             <label>
                 Referencia de entrega
 
@@ -846,25 +834,37 @@
             </label>
 
 
+            <h3 class="form-step"><span>3</span> Pago</h3>
+
             <label>
                 Método de pago *
 
                 <select id="paymentMethod" required>
-
-                    <option value="">
-                        Selecciona una opción
-                    </option>
-
-                    <option value="Transferencia bancaria">
-                        Transferencia bancaria
-                    </option>
-
-                    <option value="Pago contra entrega">
-                        Pago contra entrega
-                    </option>
-
+                    <option value="">Selecciona una opción</option>
+                    <option value="Transferencia bancaria">Transferencia bancaria</option>
+                    <option value="Pago contra entrega">Pago contra entrega</option>
                 </select>
+            </label>
 
+            <!-- Se llena desde script.js según el método elegido -->
+            <div class="pay-info" id="payInfo" hidden></div>
+
+            <label id="proofLabel" hidden>
+                Número de comprobante de la transferencia *
+
+                <input
+                    id="paymentProof"
+                    type="text"
+                    inputmode="numeric"
+                    placeholder="Ej. 123456789"
+                    autocomplete="off"
+                >
+            </label>
+
+
+            <label class="check-row" id="saveProfileWrap" hidden>
+                <input type="checkbox" id="saveProfile" checked>
+                <span>Guardar estos datos en mi cuenta para la próxima compra</span>
             </label>
 
 
@@ -877,6 +877,7 @@
             <div
                 class="checkout-error"
                 id="checkoutError"
+                role="alert"
             ></div>
 
 
@@ -903,7 +904,7 @@
     id="successOverlay"
 >
 
-    <div class="success-modal">
+    <div class="success-modal" role="dialog" aria-modal="true" aria-labelledby="successTitle">
 
         <div class="success-icon">
             ✓
@@ -913,35 +914,30 @@
             ESSENZA PERFUMERÍA
         </span>
 
-        <h2>
-            ¡Compra realizada con éxito!
+        <h2 id="successTitle">
+            ¡Pedido recibido!
         </h2>
 
         <p>
-            Gracias por tu compra. Hemos recibido tu pedido
-            correctamente.
+            Tu pedido N.º <strong id="successOrder"></strong>
+            fue enviado correctamente.
         </p>
 
-        <p class="success-small">
-            Ahora puedes enviarnos los detalles por WhatsApp
-            para coordinar tu entrega.
-        </p>
+        <div class="success-details" id="successDetails"></div>
 
         <div class="success-actions">
 
-            <a
-                id="successWhatsapp"
-                class="btn"
-                href="#"
-                target="_blank"
-                rel="noopener"
+            <button
+                id="successTrack"
+                class="btn line"
+                type="button"
             >
-                Enviar pedido por WhatsApp
-            </a>
+                Rastrear mi pedido
+            </button>
 
             <button
                 id="successClose"
-                class="btn line"
+                class="btn"
                 type="button"
             >
                 Seguir comprando
@@ -954,6 +950,240 @@
 </div>
 
 
+<!-- =========================
+     INGRESAR / CREAR CUENTA
+========================== -->
+
+<div class="m-overlay" id="authOverlay">
+
+    <div class="m-box auth-box" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+
+        <button class="m-close" type="button" data-close-modal aria-label="Cerrar">×</button>
+
+        <span class="eyebrow">ESSENZA</span>
+        <h2 id="authTitle">Ingresar</h2>
+
+        <div class="auth-tabs" id="authTabs" role="tablist">
+            <button type="button" role="tab" class="active" data-auth-tab="login" aria-selected="true">Iniciar sesión</button>
+            <button type="button" role="tab" data-auth-tab="register" aria-selected="false">Crear cuenta</button>
+        </div>
+
+
+        <form class="auth-form" id="loginForm" data-auth-panel="login" novalidate>
+
+            <label>
+                Correo
+                <input id="loginEmail" type="email" autocomplete="email" placeholder="tu@correo.com" required>
+            </label>
+
+            <label>
+                Contraseña
+                <span class="pass-field">
+                    <input id="loginPass" type="password" autocomplete="current-password" required>
+                    <button type="button" class="pass-toggle" data-toggle-pass="loginPass" aria-pressed="false">Mostrar</button>
+                </span>
+            </label>
+
+            <button type="button" class="link-btn" data-auth="recover">¿Olvidaste tu contraseña?</button>
+
+            <p class="form-msg" id="loginError" role="alert" hidden></p>
+
+            <button class="btn" type="submit">Ingresar</button>
+
+        </form>
+
+
+        <form class="auth-form" id="registerForm" data-auth-panel="register" novalidate hidden>
+
+            <label>
+                Nombre
+                <input id="regName" type="text" autocomplete="name" placeholder="Tu nombre" required>
+            </label>
+
+            <label>
+                Correo
+                <input id="regEmail" type="email" autocomplete="email" placeholder="tu@correo.com" required>
+            </label>
+
+            <label>
+                Contraseña
+                <span class="pass-field">
+                    <input id="regPass" type="password" autocomplete="new-password" minlength="8" required aria-describedby="regPassHint">
+                    <button type="button" class="pass-toggle" data-toggle-pass="regPass" aria-pressed="false">Mostrar</button>
+                </span>
+                <small class="field-hint" id="regPassHint">Mínimo 8 caracteres.</small>
+            </label>
+
+            <p class="form-msg" id="registerError" role="alert" hidden></p>
+
+            <button class="btn" type="submit">Crear cuenta</button>
+
+        </form>
+
+
+        <form class="auth-form" id="recoverForm" data-auth-panel="recover" novalidate hidden>
+
+            <p class="auth-help">Escribe tu correo y te enviaremos un enlace para crear una nueva contraseña.</p>
+
+            <label>
+                Correo
+                <input id="recEmail" type="email" autocomplete="email" placeholder="tu@correo.com" required>
+            </label>
+
+            <p class="form-msg" id="recoverMsg" role="alert" hidden></p>
+
+            <button class="btn" type="submit">Enviar enlace</button>
+            <button type="button" class="link-btn" data-auth="login">← Volver a iniciar sesión</button>
+
+        </form>
+
+
+        <form class="auth-form" id="newPassForm" data-auth-panel="newpass" novalidate hidden>
+
+            <p class="auth-help">Elige tu nueva contraseña.</p>
+
+            <label>
+                Nueva contraseña
+                <span class="pass-field">
+                    <input id="newPass" type="password" autocomplete="new-password" minlength="8" required>
+                    <button type="button" class="pass-toggle" data-toggle-pass="newPass" aria-pressed="false">Mostrar</button>
+                </span>
+                <small class="field-hint">Mínimo 8 caracteres.</small>
+            </label>
+
+            <p class="form-msg" id="newPassError" role="alert" hidden></p>
+
+            <button class="btn" type="submit">Guardar contraseña</button>
+
+        </form>
+
+
+        <p class="auth-guest">
+            ¿Prefieres no registrarte? También puedes comprar como invitado.
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     MI CUENTA
+========================== -->
+
+<div class="m-overlay" id="accountOverlay">
+
+    <div class="m-box account-box" role="dialog" aria-modal="true" aria-labelledby="accountName">
+
+        <button class="m-close" type="button" data-close-modal aria-label="Cerrar">×</button>
+
+        <span class="eyebrow">MI CUENTA</span>
+        <h2 id="accountName">Hola</h2>
+        <p class="account-email" id="accountEmail"></p>
+
+        <div class="auth-tabs" role="tablist">
+            <button type="button" role="tab" class="active" data-tab="orders" aria-selected="true">Mis pedidos</button>
+            <button type="button" role="tab" data-tab="profile" aria-selected="false">Mi perfil</button>
+        </div>
+
+        <section id="panelOrders" class="account-panel">
+            <div id="ordersList"></div>
+        </section>
+
+        <section id="panelProfile" class="account-panel" hidden>
+
+            <form id="profileForm" class="auth-form" novalidate>
+
+                <p class="auth-help">Estos datos se completan solos cuando compras.</p>
+
+                <label>
+                    Nombre completo
+                    <input id="pfName" type="text" autocomplete="name">
+                </label>
+
+                <label>
+                    Teléfono
+                    <input id="pfPhone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Ej. 0987654321">
+                </label>
+
+                <label>
+                    Dirección de entrega
+                    <input id="pfAddress" type="text" autocomplete="street-address">
+                </label>
+
+                <div class="form-row">
+                    <label>
+                        Ciudad
+                        <select id="pfCity"></select>
+                    </label>
+
+                    <label>
+                        Sector
+                        <input id="pfSector" type="text">
+                    </label>
+                </div>
+
+                <label>
+                    Referencia de entrega
+                    <textarea id="pfReference" rows="2"></textarea>
+                </label>
+
+                <p class="form-msg" id="profileMsg" role="status" hidden></p>
+
+                <button class="btn" type="submit">Guardar mis datos</button>
+
+            </form>
+
+        </section>
+
+        <button class="btn line logout" id="logoutBtn" type="button">Cerrar sesión</button>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     RASTREAR PEDIDO
+========================== -->
+
+<div class="m-overlay" id="trackOverlay">
+
+    <div class="m-box" role="dialog" aria-modal="true" aria-labelledby="trackTitle">
+
+        <button class="m-close" type="button" data-close-modal aria-label="Cerrar">×</button>
+
+        <span class="eyebrow">ESSENZA</span>
+        <h2 id="trackTitle">Rastrear mi pedido</h2>
+        <p class="auth-help">Escribe el número que te dimos al comprar y el teléfono que usaste.</p>
+
+        <form id="trackForm" class="auth-form" novalidate>
+
+            <label>
+                Número de pedido
+                <input id="trackNumber" type="text" placeholder="Ej. ESS-1A2B3C4D" autocomplete="off">
+            </label>
+
+            <label>
+                Teléfono
+                <input id="trackPhone" type="tel" inputmode="tel" placeholder="Ej. 0987654321" autocomplete="tel">
+            </label>
+
+            <button class="btn" type="submit">Consultar estado</button>
+
+        </form>
+
+        <div id="trackResult" aria-live="polite"></div>
+
+    </div>
+
+</div>
+
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.3/dist/umd/supabase.js"></script>
 <script src="script.js"></script>
 
 </body>

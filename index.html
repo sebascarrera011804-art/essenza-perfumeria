@@ -1,1190 +1,656 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta
-        name="description"
-        content="Essenza Perfumería - Fragancias elegantes para mujer, hombre, niños y sets de regalo."
-    >
-
-    <title>Essenza | Perfumería</title>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap"
-        rel="stylesheet"
-    >
-
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Descubre Essenza Perfumería y encuentra fragancias seleccionadas." name="description"/>
+<title>Essenza | Inicio</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&amp;family=Jost:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
 </head>
-
-<body>
-
+<body data-category="Todos" data-page="inicio">
 <a class="skip-link" href="#main">Saltar al contenido</a>
-
-
 <header class="header">
-    <div class="wrap">
-        <nav>
-
-            <a class="logo" href="#inicio">
+<div class="wrap">
+<nav>
+<a class="logo" href="index.html">
                 ESSENZA
                 <span>PERFUMERÍA</span>
-            </a>
-
-            <div class="nav-links" id="navLinks">
-                <a href="#inicio">Inicio</a>
-                <a href="#categorias">Categorías</a>
-                <a href="#destacados">Más vendidos</a>
-                <a href="#catalogo">Perfumes</a>
-                <a href="#nosotros">Nosotros</a>
-                <a href="#contacto">Contacto</a>
-            </div>
-
-            <div class="nav-actions">
-
-                <button
-                    class="accountbtn"
-                    id="accountBtn"
-                    type="button"
-                    aria-label="Ingresar o crear cuenta"
-                >
-                    <span aria-hidden="true">👤</span>
-                    <span id="accountLabel">Ingresar</span>
-                </button>
-
-                <button
-                    class="cartbtn"
-                    id="open"
-                    type="button"
-                    aria-label="Abrir carrito"
-                >
+</a>
+<div class="nav-links" id="navLinks">
+<a href="index.html">Inicio</a>
+<a href="catalogo.html">Catálogo</a>
+<a href="mujer.html">Mujer</a>
+<a href="hombre.html">Hombre</a>
+<a href="ninos.html">Niños</a>
+<a href="sets.html">Sets</a>
+<a href="nosotros.html">Nosotros</a>
+<a href="contacto.html">Contacto</a>
+</div>
+<div class="nav-actions">
+<button aria-label="Ingresar o crear cuenta" class="accountbtn" id="accountBtn" type="button">
+<span aria-hidden="true">👤</span>
+<span id="accountLabel">Ingresar</span>
+</button>
+<button aria-label="Abrir carrito" class="cartbtn" id="open" type="button">
                     🛒
                     <span>Carrito</span>
-                    <b id="count">0</b>
-                </button>
-
-                <button
-                    class="menubtn"
-                    id="menuBtn"
-                    type="button"
-                    aria-label="Abrir menú"
-                    aria-expanded="false"
-                    aria-controls="navLinks"
-                >
+<b id="count">0</b>
+</button>
+<button aria-controls="navLinks" aria-expanded="false" aria-label="Abrir menú" class="menubtn" id="menuBtn" type="button">
                     ☰
                 </button>
-
-            </div>
-
-        </nav>
-    </div>
+</div>
+</nav>
+</div>
 </header>
-
-
 <main id="main">
-
-    <!-- =========================
+<!-- =========================
          HERO
     ========================== -->
-
-    <section class="hero" id="inicio">
-
-        <div class="hero-overlay"></div>
-
-        <div class="wrap hero-wrap">
-
-            <div class="hero-content">
-
-                <span class="eyebrow">
+<section class="hero" id="inicio">
+<div class="hero-overlay"></div>
+<div class="wrap hero-wrap">
+<div class="hero-content">
+<span class="eyebrow">
                     ESSENZA PERFUMERÍA
                 </span>
-
-                <h1>
+<h1>
                     Una fragancia.
-                    <br>
-                    <em>Una historia.</em>
-                </h1>
-
-                <p>
+                    <br/>
+<em>Una historia.</em>
+</h1>
+<p>
                     Descubre perfumes seleccionados para expresar
                     tu personalidad, tu estilo y esos momentos
                     que quieres recordar.
                 </p>
-
-                <div class="hero-buttons">
-
-                    <a class="btn" href="#catalogo">
+<div class="hero-buttons">
+<a class="btn" href="catalogo.html">
                         Explorar colección
                     </a>
-
-                    <a class="btn line" href="#destacados">
+<a class="btn line" href="index.html#destacados">
                         Ver favoritos
                     </a>
-
-                </div>
-
-                <div class="hero-trust">
-                    <span>✓ Fragancias seleccionadas</span>
-                    <span>✓ Atención personalizada</span>
-                    <span>✓ Regalos especiales</span>
-                </div>
-
-            </div>
-
-
-            <div class="hero-product">
-
-                <div class="hero-glow"></div>
-
-                <img
-                    src="img/libre.jpg"
-                    alt="Perfume Libre de Yves Saint Laurent"
-                    data-open="2"
-                >
-
-                <div class="hero-card" data-open="2">
-
-                    <small>
+</div>
+<div class="hero-trust">
+<span>✓ Fragancias seleccionadas</span>
+<span>✓ Atención personalizada</span>
+<span>✓ Regalos especiales</span>
+</div>
+</div>
+<div class="hero-product">
+<div class="hero-glow"></div>
+<img alt="Perfume Libre de Yves Saint Laurent" data-open="2" src="img/libre.jpg"/>
+<div class="hero-card" data-open="2">
+<small>
                         FRAGANCIA DESTACADA
                     </small>
-
-                    <strong>
+<strong>
                         Libre
                     </strong>
-
-                    <span>
+<span>
                         Lavanda · Azahar · Vainilla
                     </span>
-
-                    <b id="heroPrice">
+<b id="heroPrice">
                         $125
                     </b>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
+</div>
+</div>
+</div>
+</section>
+<!-- =========================
          BENEFICIOS
     ========================== -->
-
-    <section class="benefits">
-
-        <div class="wrap benefits-grid">
-
-            <div class="benefit">
-                <strong>✦</strong>
-                <span>Fragancias seleccionadas</span>
-            </div>
-
-            <div class="benefit">
-                <strong>✦</strong>
-                <span>Envíos disponibles</span>
-            </div>
-
-            <div class="benefit">
-                <strong>✦</strong>
-                <span>Atención personalizada</span>
-            </div>
-
-            <div class="benefit">
-                <strong>✦</strong>
-                <span>Regalos especiales</span>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
+<section class="benefits">
+<div class="wrap benefits-grid">
+<div class="benefit">
+<strong>✦</strong>
+<span>Fragancias seleccionadas</span>
+</div>
+<div class="benefit">
+<strong>✦</strong>
+<span>Envíos disponibles</span>
+</div>
+<div class="benefit">
+<strong>✦</strong>
+<span>Atención personalizada</span>
+</div>
+<div class="benefit">
+<strong>✦</strong>
+<span>Regalos especiales</span>
+</div>
+</div>
+</section>
+<!-- =========================
          CATEGORÍAS
     ========================== -->
-
-    <section id="categorias">
-
-        <div class="wrap">
-
-            <div class="section-heading">
-
-                <span class="eyebrow">
+<section id="categorias">
+<div class="wrap">
+<div class="section-heading">
+<span class="eyebrow">
                     DESCUBRE
                 </span>
-
-                <h2>
+<h2>
                     Encuentra tu
                     <em>fragancia ideal</em>
-                </h2>
-
-                <p>
+</h2>
+<p>
                     Explora nuestra selección por categoría.
                 </p>
-
-            </div>
-
-            <div class="cats" id="cats"></div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
+</div>
+<div class="cats" id="cats"></div>
+</div>
+</section>
+<!-- =========================
          DESTACADOS
     ========================== -->
-
-    <section class="featured" id="destacados">
-
-        <div class="wrap">
-
-            <div class="section-heading">
-
-                <span class="eyebrow">
+<section class="featured" id="destacados">
+<div class="wrap">
+<div class="section-heading">
+<span class="eyebrow">
                     FAVORITOS
                 </span>
-
-                <h2>
+<h2>
                     Los más
                     <em>vendidos</em>
-                </h2>
-
-                <p>
+</h2>
+<p>
                     Las fragancias favoritas de nuestros clientes.
                 </p>
-
-            </div>
-
-            <div class="featured-grid" id="featuredGrid"></div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
+</div>
+<div class="featured-grid" id="featuredGrid"></div>
+</div>
+</section>
+<!-- =========================
          CATÁLOGO
     ========================== -->
-
-    <section id="catalogo" class="catalog-section">
-
-        <div class="wrap">
-
-            <div class="section-heading">
-
-                <span class="eyebrow">
+<section class="catalog-section" id="catalogo">
+<div class="wrap">
+<div class="section-heading">
+<span class="eyebrow">
                     COLECCIÓN
                 </span>
-
-                <h2>
+<h2>
                     Nuestro
                     <em>catálogo</em>
-                </h2>
-
-            </div>
-
-
-            <div class="tools">
-
-                <div class="search-box">
-
-                    <span>⌕</span>
-
-                    <input
-                        class="search"
-                        id="q"
-                        type="search"
-                        placeholder="Buscar rosa, vainilla, madera..."
-                        aria-label="Buscar perfumes"
-                    >
-
-                </div>
-
-                <select id="price" aria-label="Filtrar por precio">
-                    <option value="all">Todos los precios</option>
-                    <option value="0-60">Hasta $60</option>
-                    <option value="61-100">$61 a $100</option>
-                    <option value="101-150">$101 a $150</option>
-                    <option value="151-999">Más de $150</option>
-                </select>
-
-            </div>
-
-
-            <div class="chips" id="chips"></div>
-
-            <div class="grid" id="grid"></div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
+</h2>
+</div>
+<div class="tools">
+<div class="search-box">
+<span>⌕</span>
+<input aria-label="Buscar perfumes" class="search" id="q" placeholder="Buscar rosa, vainilla, madera..." type="search"/>
+</div>
+<select aria-label="Filtrar por precio" id="price">
+<option value="all">Todos los precios</option>
+<option value="0-60">Hasta $60</option>
+<option value="61-100">$61 a $100</option>
+<option value="101-150">$101 a $150</option>
+<option value="151-999">Más de $150</option>
+</select>
+</div>
+<div class="chips" id="chips"></div>
+<div class="grid" id="grid"></div>
+</div>
+</section>
+<!-- =========================
          NOSOTROS
     ========================== -->
-
-    <section class="about" id="nosotros">
-
-        <div class="wrap about-grid">
-
-            <div class="about-image">
-
-                <img
-                    src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=900&q=85"
-                    alt="Perfumería Essenza"
-                    loading="lazy"
-                >
-
-            </div>
-
-            <div class="about-content">
-
-                <span class="eyebrow">
+<section class="about" id="nosotros">
+<div class="wrap about-grid">
+<div class="about-image">
+<img alt="Perfumería Essenza" loading="lazy" src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&amp;fit=crop&amp;w=900&amp;q=85"/>
+</div>
+<div class="about-content">
+<span class="eyebrow">
                     SOBRE ESSENZA
                 </span>
-
-                <h2>
+<h2>
                     El aroma también
                     <em>cuenta tu historia.</em>
-                </h2>
-
-                <p>
+</h2>
+<p>
                     En Essenza creemos que una fragancia es mucho
                     más que un perfume. Es una forma de expresar
                     quién eres, recordar momentos y crear nuevas
                     historias.
                 </p>
-
-                <p>
+<p>
                     Seleccionamos fragancias para diferentes estilos,
                     edades y ocasiones, buscando siempre una experiencia
                     especial para nuestros clientes.
                 </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
+</div>
+</div>
+</section>
+<!-- =========================
          CONTACTO
     ========================== -->
-
-    <section id="contacto">
-
-        <div class="wrap contact-grid">
-
-            <div class="contact-info">
-
-                <span class="eyebrow">
+<section id="contacto">
+<div class="wrap contact-grid">
+<div class="contact-info">
+<span class="eyebrow">
                     CONTACTO
                 </span>
-
-                <h2>
+<h2>
                     ¿Tienes alguna
                     <em>pregunta?</em>
-                </h2>
-
-                <p>
+</h2>
+<p>
                     Escríbenos y estaremos encantados de ayudarte
                     a encontrar tu próxima fragancia.
                 </p>
-
-                <a
-                    href="https://wa.me/593983098535"
-                    target="_blank"
-                    rel="noopener"
-                    class="contact-whatsapp"
-                >
+<a class="contact-whatsapp" href="https://wa.me/593983098535" rel="noopener" target="_blank">
                     WhatsApp
                 </a>
-
-            </div>
-
-
-            <form id="form" class="contact-form" novalidate>
-
-                <label>
+</div>
+<form class="contact-form" id="form" novalidate="">
+<label>
                     Nombre
 
-                    <input
-                        id="nm"
-                        required
-                        autocomplete="name"
-                        placeholder="Tu nombre"
-                    >
-                </label>
-
-                <label>
+                    <input autocomplete="name" id="nm" placeholder="Tu nombre" required=""/>
+</label>
+<label>
                     Correo
 
-                    <input
-                        id="em"
-                        type="email"
-                        required
-                        autocomplete="email"
-                        placeholder="tu@email.com"
-                    >
-                </label>
-
-                <label>
+                    <input autocomplete="email" id="em" placeholder="tu@email.com" required="" type="email"/>
+</label>
+<label>
                     Mensaje
 
-                    <textarea
-                        id="ms"
-                        rows="5"
-                        required
-                        placeholder="¿En qué podemos ayudarte?"
-                    ></textarea>
-                </label>
-
-                <button class="btn" type="submit">
+                    <textarea id="ms" placeholder="¿En qué podemos ayudarte?" required="" rows="5"></textarea>
+</label>
+<button class="btn" type="submit">
                     Enviar mensaje
                 </button>
-
-                <div
-                    class="msg"
-                    id="msg"
-                    role="status"
-                ></div>
-
-            </form>
-
-        </div>
-
-    </section>
-
+<div class="msg" id="msg" role="status"></div>
+</form>
+</div>
+</section>
 </main>
-
-
 <!-- =========================
      FOOTER
 ========================== -->
-
 <footer>
-
-    <div class="wrap footer-inner">
-
-        <div class="footer-brand">
-
-            <strong>ESSENZA</strong>
-            <span>PERFUMERÍA</span>
-
-        </div>
-
-        <nav class="footer-links" aria-label="Enlaces del pie de página">
-            <button type="button" class="link-btn" data-open-track>Rastrear mi pedido</button>
-            <a href="#contacto">Contacto</a>
-            <a href="#catalogo">Catálogo</a>
-        </nav>
-
-        <p>
+<div class="wrap footer-inner">
+<div class="footer-brand">
+<strong>ESSENZA</strong>
+<span>PERFUMERÍA</span>
+</div>
+<nav aria-label="Enlaces del pie de página" class="footer-links">
+<button class="link-btn" data-open-track="" type="button">Rastrear mi pedido</button>
+<a href="contacto.html">Contacto</a>
+<a href="catalogo.html">Catálogo</a>
+</nav>
+<p>
             © 2026 Essenza Perfumería. Todos los derechos reservados.
         </p>
-
-    </div>
-
+</div>
 </footer>
-
-
 <!-- =========================
      WHATSAPP
 ========================== -->
-
-<a
-    class="wa"
-    href="https://wa.me/593983098535?text=Hola%20Essenza%2C%20quiero%20informaci%C3%B3n"
-    target="_blank"
-    rel="noopener"
-    aria-label="Escribir por WhatsApp"
->
-    <span>◔</span>
+<a aria-label="Escribir por WhatsApp" class="wa" href="https://wa.me/593983098535?text=Hola%20Essenza%2C%20quiero%20informaci%C3%B3n" rel="noopener" target="_blank">
+<span>◔</span>
 </a>
-
-
 <!-- =========================
      OVERLAY CARRITO
 ========================== -->
-
-<div
-    class="drawer-overlay"
-    id="drawerOverlay"
-></div>
-
-
+<div class="drawer-overlay" id="drawerOverlay"></div>
 <!-- =========================
      CARRITO
 ========================== -->
-
-<aside
-    class="drawer"
-    id="drawer"
-    aria-label="Carrito"
->
-
-    <div class="drawer-header">
-
-        <div>
-
-            <span class="eyebrow">
+<aside aria-label="Carrito" class="drawer" id="drawer">
+<div class="drawer-header">
+<div>
+<span class="eyebrow">
                 ESSENZA
             </span>
-
-            <h3>
+<h3>
                 Tu carrito
             </h3>
-
-        </div>
-
-        <button
-            id="close"
-            type="button"
-            aria-label="Cerrar carrito"
-        >
+</div>
+<button aria-label="Cerrar carrito" id="close" type="button">
             ×
         </button>
-
-    </div>
-
-
-    <div id="items"></div>
-
-
-    <div class="cart-footer">
-
-        <div class="total">
-
-            <span>
+</div>
+<div id="items"></div>
+<div class="cart-footer">
+<div class="total">
+<span>
                 Total
             </span>
-
-            <strong id="total">
+<strong id="total">
                 $0
             </strong>
-
-        </div>
-
-        <button
-            class="btn buy-link"
-            id="buy"
-            type="button"
-        >
+</div>
+<button class="btn buy-link" id="buy" type="button">
             Finalizar compra
         </button>
-
-        <small>
+<small>
             En el siguiente paso eliges tu forma de pago.
         </small>
-
-    </div>
-
+</div>
 </aside>
-
-
 <!-- =========================
      MODAL DETALLE PRODUCTO
 ========================== -->
-
-<div
-    class="product-overlay"
-    id="productOverlay"
->
-
-    <div
-        class="product-modal"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="productModalTitle"
-    >
-
-        <button
-            class="product-close"
-            id="productClose"
-            type="button"
-            aria-label="Cerrar producto"
-        >
+<div class="product-overlay" id="productOverlay">
+<div aria-labelledby="productModalTitle" aria-modal="true" class="product-modal" role="dialog">
+<button aria-label="Cerrar producto" class="product-close" id="productClose" type="button">
             ×
         </button>
-
-
-        <div class="product-modal-image">
-
-            <img
-                id="productModalImage"
-                src=""
-                alt=""
-            >
-
-            <span
-                class="product-modal-tag"
-                id="productModalTag"
-            ></span>
-
-        </div>
-
-
-        <div class="product-modal-content">
-
-            <span
-                class="product-modal-category"
-                id="productModalCategory"
-            ></span>
-
-            <h2 id="productModalTitle">
+<div class="product-modal-image">
+<img alt="" id="productModalImage" src=""/>
+<span class="product-modal-tag" id="productModalTag"></span>
+</div>
+<div class="product-modal-content">
+<span class="product-modal-category" id="productModalCategory"></span>
+<h2 id="productModalTitle">
                 Perfume
             </h2>
-
-            <p
-                class="product-modal-notes"
-                id="productModalNotes"
-            ></p>
-
-            <p
-                class="product-modal-description"
-                id="productModalDescription"
-            ></p>
-
-
-            <div class="product-details">
-
-                <div>
-                    <span>TAMAÑO</span>
-                    <strong id="productModalSize">
+<p class="product-modal-notes" id="productModalNotes"></p>
+<p class="product-modal-description" id="productModalDescription"></p>
+<div class="product-details">
+<div>
+<span>TAMAÑO</span>
+<strong id="productModalSize">
                         100 ml
                     </strong>
-                </div>
-
-                <div>
-                    <span>FRAGANCIA</span>
-                    <strong id="productModalFamily">
+</div>
+<div>
+<span>FRAGANCIA</span>
+<strong id="productModalFamily">
                         Exclusiva
                     </strong>
-                </div>
-
-                <div>
-                    <span>DISPONIBILIDAD</span>
-                    <strong class="available" id="productModalStock">
+</div>
+<div>
+<span>DISPONIBILIDAD</span>
+<strong class="available" id="productModalStock">
                         Disponible
                     </strong>
-                </div>
-
-            </div>
-
-
-            <div class="product-modal-bottom">
-
-                <strong
-                    class="product-modal-price"
-                    id="productModalPrice"
-                >
+</div>
+</div>
+<div class="product-modal-bottom">
+<strong class="product-modal-price" id="productModalPrice">
                     $0
                 </strong>
-
-                <button
-                    class="btn"
-                    id="productModalAdd"
-                    type="button"
-                >
+<button class="btn" id="productModalAdd" type="button">
                     Agregar al carrito
                 </button>
-
-            </div>
-
-        </div>
-
-    </div>
-
 </div>
-
-
+</div>
+</div>
+</div>
 <!-- =========================
      MODAL CHECKOUT
 ========================== -->
-
-<div
-    class="checkout-overlay"
-    id="checkoutOverlay"
->
-
-    <div
-        class="checkout-modal"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="checkoutTitle"
-    >
-
-        <button
-            class="checkout-close"
-            id="checkoutClose"
-            type="button"
-            aria-label="Cerrar formulario"
-        >
+<div class="checkout-overlay" id="checkoutOverlay">
+<div aria-labelledby="checkoutTitle" aria-modal="true" class="checkout-modal" role="dialog">
+<button aria-label="Cerrar formulario" class="checkout-close" id="checkoutClose" type="button">
             ×
         </button>
-
-
-        <div class="checkout-header">
-
-            <span class="eyebrow">
+<div class="checkout-header">
+<span class="eyebrow">
                 ESSENZA
             </span>
-
-            <h2 id="checkoutTitle">
+<h2 id="checkoutTitle">
                 Finalizar compra
             </h2>
-
-            <p>
+<p>
                 Ingresa tus datos para coordinar la entrega.
             </p>
-
-        </div>
-
-
-        <form
-            id="checkoutForm"
-            class="checkout-form"
-            novalidate
-        >
-
-            <div class="checkout-account" id="checkoutAccount"></div>
-
-            <h3 class="form-step"><span>1</span> Tus datos</h3>
-
-            <div class="form-row">
-
-                <label>
+</div>
+<form class="checkout-form" id="checkoutForm" novalidate="">
+<div class="checkout-account" id="checkoutAccount"></div>
+<h3 class="form-step"><span>1</span> Tus datos</h3>
+<div class="form-row">
+<label>
                     Nombre completo *
 
-                    <input
-                        id="customerName"
-                        type="text"
-                        placeholder="Ej. Sebastián Carrera"
-                        autocomplete="name"
-                        required
-                    >
-                </label>
-
-                <label>
+                    <input autocomplete="name" id="customerName" placeholder="Ej. Sebastián Carrera" required="" type="text"/>
+</label>
+<label>
                     Teléfono *
 
-                    <input
-                        id="customerPhone"
-                        type="tel"
-                        inputmode="tel"
-                        placeholder="Ej. 0987654321"
-                        autocomplete="tel"
-                        required
-                    >
-                </label>
-
-            </div>
-
-
-            <h3 class="form-step"><span>2</span> Entrega</h3>
-
-            <label>
+                    <input autocomplete="tel" id="customerPhone" inputmode="tel" placeholder="Ej. 0987654321" required="" type="tel"/>
+</label>
+</div>
+<h3 class="form-step"><span>2</span> Entrega</h3>
+<label>
                 Dirección de entrega *
 
-                <input
-                    id="customerAddress"
-                    type="text"
-                    placeholder="Calle principal, número y calle secundaria"
-                    autocomplete="street-address"
-                    required
-                >
-            </label>
-
-            <div class="form-row">
-
-                <label>
+                <input autocomplete="street-address" id="customerAddress" placeholder="Calle principal, número y calle secundaria" required="" type="text"/>
+</label>
+<div class="form-row">
+<label>
                     Ciudad *
 
-                    <select id="customerCity" required></select>
-                </label>
-
-                <label>
+                    <select id="customerCity" required=""></select>
+</label>
+<label>
                     Sector
 
-                    <input
-                        id="customerSector"
-                        type="text"
-                        placeholder="Ej. Cumbayá"
-                    >
-                </label>
-
-            </div>
-
-            <label>
+                    <input id="customerSector" placeholder="Ej. Cumbayá" type="text"/>
+</label>
+</div>
+<label>
                 Referencia de entrega
 
-                <textarea
-                    id="customerReference"
-                    rows="2"
-                    placeholder="Ej. Casa blanca junto al parque..."
-                ></textarea>
-            </label>
-
-
-            <h3 class="form-step"><span>3</span> Pago</h3>
-
-            <label>
+                <textarea id="customerReference" placeholder="Ej. Casa blanca junto al parque..." rows="2"></textarea>
+</label>
+<h3 class="form-step"><span>3</span> Pago</h3>
+<label>
                 Método de pago *
 
-                <select id="paymentMethod" required>
-                    <option value="">Selecciona una opción</option>
-                    <option value="Transferencia bancaria">Transferencia bancaria</option>
-                    <option value="Pago contra entrega">Pago contra entrega</option>
-                </select>
-            </label>
-
-            <!-- Se llena desde script.js según el método elegido -->
-            <div class="pay-info" id="payInfo" hidden></div>
-
-            <label id="proofLabel" hidden>
+                <select id="paymentMethod" required="">
+<option value="">Selecciona una opción</option>
+<option value="Transferencia bancaria">Transferencia bancaria</option>
+<option value="Pago contra entrega">Pago contra entrega</option>
+</select>
+</label>
+<!-- Se llena desde script.js según el método elegido -->
+<div class="pay-info" hidden="" id="payInfo"></div>
+<label hidden="" id="proofLabel">
                 Número de comprobante de la transferencia *
 
-                <input
-                    id="paymentProof"
-                    type="text"
-                    inputmode="numeric"
-                    placeholder="Ej. 123456789"
-                    autocomplete="off"
-                >
-            </label>
-
-
-            <label class="check-row" id="saveProfileWrap" hidden>
-                <input type="checkbox" id="saveProfile" checked>
-                <span>Guardar estos datos en mi cuenta para la próxima compra</span>
-            </label>
-
-
-            <div
-                class="checkout-summary"
-                id="checkoutSummary"
-            ></div>
-
-
-            <div
-                class="checkout-error"
-                id="checkoutError"
-                role="alert"
-            ></div>
-
-
-            <button
-                class="btn checkout-submit"
-                type="submit"
-            >
+                <input autocomplete="off" id="paymentProof" inputmode="numeric" placeholder="Ej. 123456789" type="text"/>
+</label>
+<label class="check-row" hidden="" id="saveProfileWrap">
+<input checked="" id="saveProfile" type="checkbox"/>
+<span>Guardar estos datos en mi cuenta para la próxima compra</span>
+</label>
+<div class="checkout-summary" id="checkoutSummary"></div>
+<div class="checkout-error" id="checkoutError" role="alert"></div>
+<button class="btn checkout-submit" type="submit">
                 Confirmar compra
             </button>
-
-        </form>
-
-    </div>
-
+</form>
 </div>
-
-
+</div>
 <!-- =========================
      MODAL ÉXITO
 ========================== -->
-
-<div
-    class="success-overlay"
-    id="successOverlay"
->
-
-    <div class="success-modal" role="dialog" aria-modal="true" aria-labelledby="successTitle">
-
-        <div class="success-icon">
+<div class="success-overlay" id="successOverlay">
+<div aria-labelledby="successTitle" aria-modal="true" class="success-modal" role="dialog">
+<div class="success-icon">
             ✓
         </div>
-
-        <span class="eyebrow">
+<span class="eyebrow">
             ESSENZA PERFUMERÍA
         </span>
-
-        <h2 id="successTitle">
+<h2 id="successTitle">
             ¡Pedido recibido!
         </h2>
-
-        <p>
+<p>
             Tu pedido N.º <strong id="successOrder"></strong>
             fue enviado correctamente.
         </p>
-
-        <div class="success-details" id="successDetails"></div>
-
-        <div class="success-actions">
-
-            <button
-                id="successTrack"
-                class="btn line"
-                type="button"
-            >
+<div class="success-details" id="successDetails"></div>
+<div class="success-actions">
+<button class="btn line" id="successTrack" type="button">
                 Rastrear mi pedido
             </button>
-
-            <button
-                id="successClose"
-                class="btn"
-                type="button"
-            >
+<button class="btn" id="successClose" type="button">
                 Seguir comprando
             </button>
-
-        </div>
-
-    </div>
-
 </div>
-
-
+</div>
+</div>
 <!-- =========================
      INGRESAR / CREAR CUENTA
 ========================== -->
-
 <div class="m-overlay" id="authOverlay">
-
-    <div class="m-box auth-box" role="dialog" aria-modal="true" aria-labelledby="authTitle">
-
-        <button class="m-close" type="button" data-close-modal aria-label="Cerrar">×</button>
-
-        <span class="eyebrow">ESSENZA</span>
-        <h2 id="authTitle">Ingresar</h2>
-
-        <div class="auth-tabs" id="authTabs" role="tablist">
-            <button type="button" role="tab" class="active" data-auth-tab="login" aria-selected="true">Iniciar sesión</button>
-            <button type="button" role="tab" data-auth-tab="register" aria-selected="false">Crear cuenta</button>
-        </div>
-
-
-        <form class="auth-form" id="loginForm" data-auth-panel="login" novalidate>
-
-            <label>
+<div aria-labelledby="authTitle" aria-modal="true" class="m-box auth-box" role="dialog">
+<button aria-label="Cerrar" class="m-close" data-close-modal="" type="button">×</button>
+<span class="eyebrow">ESSENZA</span>
+<h2 id="authTitle">Ingresar</h2>
+<div class="auth-tabs" id="authTabs" role="tablist">
+<button aria-selected="true" class="active" data-auth-tab="login" role="tab" type="button">Iniciar sesión</button>
+<button aria-selected="false" data-auth-tab="register" role="tab" type="button">Crear cuenta</button>
+</div>
+<form class="auth-form" data-auth-panel="login" id="loginForm" novalidate="">
+<label>
                 Correo
-                <input id="loginEmail" type="email" autocomplete="email" placeholder="tu@correo.com" required>
-            </label>
-
-            <label>
+                <input autocomplete="email" id="loginEmail" placeholder="tu@correo.com" required="" type="email"/>
+</label>
+<label>
                 Contraseña
                 <span class="pass-field">
-                    <input id="loginPass" type="password" autocomplete="current-password" required>
-                    <button type="button" class="pass-toggle" data-toggle-pass="loginPass" aria-pressed="false">Mostrar</button>
-                </span>
-            </label>
-
-            <button type="button" class="link-btn" data-auth="recover">¿Olvidaste tu contraseña?</button>
-
-            <p class="form-msg" id="loginError" role="alert" hidden></p>
-
-            <button class="btn" type="submit">Ingresar</button>
-
-        </form>
-
-
-        <form class="auth-form" id="registerForm" data-auth-panel="register" novalidate hidden>
-
-            <label>
+<input autocomplete="current-password" id="loginPass" required="" type="password"/>
+<button aria-pressed="false" class="pass-toggle" data-toggle-pass="loginPass" type="button">Mostrar</button>
+</span>
+</label>
+<button class="link-btn" data-auth="recover" type="button">¿Olvidaste tu contraseña?</button>
+<p class="form-msg" hidden="" id="loginError" role="alert"></p>
+<button class="btn" type="submit">Ingresar</button>
+</form>
+<form class="auth-form" data-auth-panel="register" hidden="" id="registerForm" novalidate="">
+<label>
                 Nombre
-                <input id="regName" type="text" autocomplete="name" placeholder="Tu nombre" required>
-            </label>
-
-            <label>
+                <input autocomplete="name" id="regName" placeholder="Tu nombre" required="" type="text"/>
+</label>
+<label>
                 Correo
-                <input id="regEmail" type="email" autocomplete="email" placeholder="tu@correo.com" required>
-            </label>
-
-            <label>
+                <input autocomplete="email" id="regEmail" placeholder="tu@correo.com" required="" type="email"/>
+</label>
+<label>
                 Contraseña
                 <span class="pass-field">
-                    <input id="regPass" type="password" autocomplete="new-password" minlength="8" required aria-describedby="regPassHint">
-                    <button type="button" class="pass-toggle" data-toggle-pass="regPass" aria-pressed="false">Mostrar</button>
-                </span>
-                <small class="field-hint" id="regPassHint">Mínimo 8 caracteres.</small>
-            </label>
-
-            <p class="form-msg" id="registerError" role="alert" hidden></p>
-
-            <button class="btn" type="submit">Crear cuenta</button>
-
-        </form>
-
-
-        <form class="auth-form" id="recoverForm" data-auth-panel="recover" novalidate hidden>
-
-            <p class="auth-help">Escribe tu correo y te enviaremos un enlace para crear una nueva contraseña.</p>
-
-            <label>
+<input aria-describedby="regPassHint" autocomplete="new-password" id="regPass" minlength="8" required="" type="password"/>
+<button aria-pressed="false" class="pass-toggle" data-toggle-pass="regPass" type="button">Mostrar</button>
+</span>
+<small class="field-hint" id="regPassHint">Mínimo 8 caracteres.</small>
+</label>
+<p class="form-msg" hidden="" id="registerError" role="alert"></p>
+<button class="btn" type="submit">Crear cuenta</button>
+</form>
+<form class="auth-form" data-auth-panel="recover" hidden="" id="recoverForm" novalidate="">
+<p class="auth-help">Escribe tu correo y te enviaremos un enlace para crear una nueva contraseña.</p>
+<label>
                 Correo
-                <input id="recEmail" type="email" autocomplete="email" placeholder="tu@correo.com" required>
-            </label>
-
-            <p class="form-msg" id="recoverMsg" role="alert" hidden></p>
-
-            <button class="btn" type="submit">Enviar enlace</button>
-            <button type="button" class="link-btn" data-auth="login">← Volver a iniciar sesión</button>
-
-        </form>
-
-
-        <form class="auth-form" id="newPassForm" data-auth-panel="newpass" novalidate hidden>
-
-            <p class="auth-help">Elige tu nueva contraseña.</p>
-
-            <label>
+                <input autocomplete="email" id="recEmail" placeholder="tu@correo.com" required="" type="email"/>
+</label>
+<p class="form-msg" hidden="" id="recoverMsg" role="alert"></p>
+<button class="btn" type="submit">Enviar enlace</button>
+<button class="link-btn" data-auth="login" type="button">← Volver a iniciar sesión</button>
+</form>
+<form class="auth-form" data-auth-panel="newpass" hidden="" id="newPassForm" novalidate="">
+<p class="auth-help">Elige tu nueva contraseña.</p>
+<label>
                 Nueva contraseña
                 <span class="pass-field">
-                    <input id="newPass" type="password" autocomplete="new-password" minlength="8" required>
-                    <button type="button" class="pass-toggle" data-toggle-pass="newPass" aria-pressed="false">Mostrar</button>
-                </span>
-                <small class="field-hint">Mínimo 8 caracteres.</small>
-            </label>
-
-            <p class="form-msg" id="newPassError" role="alert" hidden></p>
-
-            <button class="btn" type="submit">Guardar contraseña</button>
-
-        </form>
-
-
-        <p class="auth-guest">
+<input autocomplete="new-password" id="newPass" minlength="8" required="" type="password"/>
+<button aria-pressed="false" class="pass-toggle" data-toggle-pass="newPass" type="button">Mostrar</button>
+</span>
+<small class="field-hint">Mínimo 8 caracteres.</small>
+</label>
+<p class="form-msg" hidden="" id="newPassError" role="alert"></p>
+<button class="btn" type="submit">Guardar contraseña</button>
+</form>
+<p class="auth-guest">
             ¿Prefieres no registrarte? También puedes comprar como invitado.
         </p>
-
-    </div>
-
 </div>
-
-
+</div>
 <!-- =========================
      MI CUENTA
 ========================== -->
-
 <div class="m-overlay" id="accountOverlay">
-
-    <div class="m-box account-box" role="dialog" aria-modal="true" aria-labelledby="accountName">
-
-        <button class="m-close" type="button" data-close-modal aria-label="Cerrar">×</button>
-
-        <span class="eyebrow">MI CUENTA</span>
-        <h2 id="accountName">Hola</h2>
-        <p class="account-email" id="accountEmail"></p>
-
-        <div class="auth-tabs" role="tablist">
-            <button type="button" role="tab" class="active" data-tab="orders" aria-selected="true">Mis pedidos</button>
-            <button type="button" role="tab" data-tab="profile" aria-selected="false">Mi perfil</button>
-        </div>
-
-        <section id="panelOrders" class="account-panel">
-            <div id="ordersList"></div>
-        </section>
-
-        <section id="panelProfile" class="account-panel" hidden>
-
-            <form id="profileForm" class="auth-form" novalidate>
-
-                <p class="auth-help">Estos datos se completan solos cuando compras.</p>
-
-                <label>
+<div aria-labelledby="accountName" aria-modal="true" class="m-box account-box" role="dialog">
+<button aria-label="Cerrar" class="m-close" data-close-modal="" type="button">×</button>
+<span class="eyebrow">MI CUENTA</span>
+<h2 id="accountName">Hola</h2>
+<p class="account-email" id="accountEmail"></p>
+<div class="auth-tabs" role="tablist">
+<button aria-selected="true" class="active" data-tab="orders" role="tab" type="button">Mis pedidos</button>
+<button aria-selected="false" data-tab="profile" role="tab" type="button">Mi perfil</button>
+</div>
+<section class="account-panel" id="panelOrders">
+<div id="ordersList"></div>
+</section>
+<section class="account-panel" hidden="" id="panelProfile">
+<form class="auth-form" id="profileForm" novalidate="">
+<p class="auth-help">Estos datos se completan solos cuando compras.</p>
+<label>
                     Nombre completo
-                    <input id="pfName" type="text" autocomplete="name">
-                </label>
-
-                <label>
+                    <input autocomplete="name" id="pfName" type="text"/>
+</label>
+<label>
                     Teléfono
-                    <input id="pfPhone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Ej. 0987654321">
-                </label>
-
-                <label>
+                    <input autocomplete="tel" id="pfPhone" inputmode="tel" placeholder="Ej. 0987654321" type="tel"/>
+</label>
+<label>
                     Dirección de entrega
-                    <input id="pfAddress" type="text" autocomplete="street-address">
-                </label>
-
-                <div class="form-row">
-                    <label>
+                    <input autocomplete="street-address" id="pfAddress" type="text"/>
+</label>
+<div class="form-row">
+<label>
                         Ciudad
                         <select id="pfCity"></select>
-                    </label>
-
-                    <label>
+</label>
+<label>
                         Sector
-                        <input id="pfSector" type="text">
-                    </label>
-                </div>
-
-                <label>
+                        <input id="pfSector" type="text"/>
+</label>
+</div>
+<label>
                     Referencia de entrega
                     <textarea id="pfReference" rows="2"></textarea>
-                </label>
-
-                <p class="form-msg" id="profileMsg" role="status" hidden></p>
-
-                <button class="btn" type="submit">Guardar mis datos</button>
-
-            </form>
-
-        </section>
-
-        <button class="btn line logout" id="logoutBtn" type="button">Cerrar sesión</button>
-
-    </div>
-
+</label>
+<p class="form-msg" hidden="" id="profileMsg" role="status"></p>
+<button class="btn" type="submit">Guardar mis datos</button>
+</form>
+</section>
+<button class="btn line logout" id="logoutBtn" type="button">Cerrar sesión</button>
 </div>
-
-
+</div>
 <!-- =========================
      RASTREAR PEDIDO
 ========================== -->
-
 <div class="m-overlay" id="trackOverlay">
-
-    <div class="m-box" role="dialog" aria-modal="true" aria-labelledby="trackTitle">
-
-        <button class="m-close" type="button" data-close-modal aria-label="Cerrar">×</button>
-
-        <span class="eyebrow">ESSENZA</span>
-        <h2 id="trackTitle">Rastrear mi pedido</h2>
-        <p class="auth-help">Escribe el número que te dimos al comprar y el teléfono que usaste.</p>
-
-        <form id="trackForm" class="auth-form" novalidate>
-
-            <label>
+<div aria-labelledby="trackTitle" aria-modal="true" class="m-box" role="dialog">
+<button aria-label="Cerrar" class="m-close" data-close-modal="" type="button">×</button>
+<span class="eyebrow">ESSENZA</span>
+<h2 id="trackTitle">Rastrear mi pedido</h2>
+<p class="auth-help">Escribe el número que te dimos al comprar y el teléfono que usaste.</p>
+<form class="auth-form" id="trackForm" novalidate="">
+<label>
                 Número de pedido
-                <input id="trackNumber" type="text" placeholder="Ej. ESS-1A2B3C4D" autocomplete="off">
-            </label>
-
-            <label>
+                <input autocomplete="off" id="trackNumber" placeholder="Ej. ESS-1A2B3C4D" type="text"/>
+</label>
+<label>
                 Teléfono
-                <input id="trackPhone" type="tel" inputmode="tel" placeholder="Ej. 0987654321" autocomplete="tel">
-            </label>
-
-            <button class="btn" type="submit">Consultar estado</button>
-
-        </form>
-
-        <div id="trackResult" aria-live="polite"></div>
-
-    </div>
-
+                <input autocomplete="tel" id="trackPhone" inputmode="tel" placeholder="Ej. 0987654321" type="tel"/>
+</label>
+<button class="btn" type="submit">Consultar estado</button>
+</form>
+<div aria-live="polite" id="trackResult"></div>
 </div>
-
-
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-
+</div>
+<div aria-live="polite" class="toast" id="toast" role="status"></div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.3/dist/umd/supabase.js"></script>
 <script src="script.js"></script>
-
 </body>
 </html>

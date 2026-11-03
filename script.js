@@ -1,6 +1,4 @@
-/* Conexión con tu base de datos en Supabase.
-   La clave "publishable" es pública por diseño: la seguridad real
-   la dan las reglas (RLS) que ya creaste en la base de datos. */
+
 const SUPABASE_URL = 'https://bhmdlbyexqdtnkufmlpu.supabase.co';
 const SUPABASE_KEY = 'sb_publishable_VKrMu0d8LpdtHet127ZrYQ_KFfaAiSS';
 
@@ -53,7 +51,7 @@ const sb = (window.supabase && window.supabase.createClient)
 
 let P = [];                    // productos (vienen de la base de datos)
 let catalogStatus = 'loading'; // loading | ready | error
-const state = { cat: 'Todos', q: '', pr: 'all' };
+const state = { cat: document.body.dataset.category || 'Todos', q: '', pr: 'all' };
 const cart = {};
 let currentProductId = null;
 
@@ -299,12 +297,13 @@ function buildCategories() {
 
     container.innerHTML = CATS.map(cat => {
         const count = P.filter(p => p.c === cat).length;
+        const page = ({ 'Mujer':'mujer.html', 'Hombre':'hombre.html', 'Niños':'ninos.html', 'Sets de regalo':'sets.html' })[cat];
         return `
-            <button class="cat" data-cat="${cat}" type="button">
+            <a class="cat" href="${page}" aria-label="Explorar categoría ${cat}">
                 <h3>${cat}</h3>
                 <span>${CAT_SUBTITLE[cat] || ''}</span>
                 <em>${catalogStatus === 'ready' ? `${count} fragancias →` : 'Ver fragancias →'}</em>
-            </button>
+            </a>
         `;
     }).join('');
 }
@@ -1279,6 +1278,8 @@ document.addEventListener('click', event => {
     /* Tarjetas de categoría */
     const category = t.closest('.cat');
     if (category) {
+        /* Los enlaces de categoría navegan a documentos HTML independientes. */
+        if (category.tagName === 'A' && category.getAttribute('href')) return;
         state.cat = category.dataset.cat;
         syncChips();
         render();

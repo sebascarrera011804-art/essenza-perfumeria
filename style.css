@@ -2796,3 +2796,12 @@ body[data-page="inicio"] .benefits { display:block; }
 body[data-page="inicio"] #categorias { display:block; }
 body[data-page="inicio"] #destacados { display:block; }
 body[data-page="catalogo"] #catalogo, body[data-page="mujer"] #catalogo, body[data-page="hombre"] #catalogo, body[data-page="ninos"] #catalogo, body[data-page="sets"] #catalogo, body[data-page="nosotros"] #nosotros, body[data-page="contacto"] #contacto { display:block; }
+
+
+/* Ícono real de WhatsApp */
+.wa svg {
+    width: 30px;
+    height: 30px;
+    fill: currentColor;
+    display: block;
+}

@@ -1,4 +1,3 @@
-
 const SUPABASE_URL = 'https://bhmdlbyexqdtnkufmlpu.supabase.co';
 const SUPABASE_KEY = 'sb_publishable_VKrMu0d8LpdtHet127ZrYQ_KFfaAiSS';
 
@@ -878,21 +877,36 @@ function showSuccess(order) {
 ===================================================== */
 
 function authMessage(error) {
+    /* El detalle real queda en la consola (F12) para poder diagnosticar */
+    console.error('[Essenza auth]', error?.status, error?.code, error?.message, error);
+
     const m = String(error?.message || '').toLowerCase();
+    const code = String(error?.code || '').toLowerCase();
 
     if (m.includes('invalid login')) return 'Correo o contraseña incorrectos.';
     if (m.includes('already registered') || m.includes('already been registered')) {
         return 'Ya existe una cuenta con ese correo. Prueba iniciar sesión.';
     }
-    if (m.includes('not confirmed')) return 'Debes confirmar tu correo antes de ingresar. Revisa tu bandeja de entrada.';
-    if (m.includes('rate limit') || m.includes('too many') || m.includes('security purposes')) {
-        return 'Demasiados intentos. Espera unos minutos e inténtalo de nuevo.';
+    if (m.includes('not confirmed') || code === 'email_not_confirmed') {
+        return 'Debes confirmar tu correo antes de ingresar. Revisa tu bandeja de entrada (y spam).';
     }
+    if (m.includes('rate limit') || m.includes('too many') || m.includes('security purposes') || code.includes('rate_limit')) {
+        return 'Se enviaron demasiados correos o intentos. Espera unos minutos e inténtalo de nuevo.';
+    }
+    if (m.includes('signups not allowed') || m.includes('signup is disabled') || code === 'signup_disabled') {
+        return 'El registro de cuentas está desactivado por ahora. Puedes comprar como invitado.';
+    }
+    if (m.includes('invalid api key') || m.includes('apikey')) {
+        return 'Error de configuración del servidor. Avísanos por WhatsApp.';
+    }
+    if (m.includes('email address') && m.includes('invalid')) return 'Ese correo no es válido. Revísalo.';
     if (m.includes('same password')) return 'La nueva contraseña debe ser distinta a la anterior.';
     if (m.includes('password')) return 'La contraseña es muy débil. Usa al menos 8 caracteres.';
     if (m.includes('fetch') || m.includes('network')) return 'No hay conexión con el servidor. Revisa tu internet.';
     return 'Ocurrió un problema. Inténtalo de nuevo.';
 }
+
+const NO_SERVER_MSG = 'No pudimos conectar con el servidor. Recarga la página o revisa tu internet.';
 
 function displayName() {
     const name = (profile?.full_name || user?.user_metadata?.full_name || '').trim();
@@ -1525,6 +1539,7 @@ $('loginForm')?.addEventListener('submit', async event => {
     if (!isEmail(email)) return setMsg($('loginError'), 'Escribe un correo válido.');
     if (!password) return setMsg($('loginError'), 'Escribe tu contraseña.');
     setMsg($('loginError'), '');
+    if (!sb) return setMsg($('loginError'), NO_SERVER_MSG);
 
     await withBusy(event.target.querySelector('button[type=submit]'), 'Ingresando…', async () => {
         const { error } = await sb.auth.signInWithPassword({ email, password });
@@ -1546,13 +1561,14 @@ $('registerForm')?.addEventListener('submit', async event => {
     if (!isEmail(email)) return setMsg(box, 'Escribe un correo válido.');
     if (password.length < 8) return setMsg(box, 'La contraseña debe tener al menos 8 caracteres.');
     setMsg(box, '');
+    if (!sb) return setMsg(box, NO_SERVER_MSG);
 
     await withBusy(event.target.querySelector('button[type=submit]'), 'Creando cuenta…', async () => {
-        const { data, error } = await sb.auth.signUp({
-            email,
-            password,
-            options: { data: { full_name: name } }
-        });
+        const options = { data: { full_name: name } };
+        /* El enlace del correo de confirmación vuelve a esta misma página */
+        if (location.protocol.startsWith('http')) options.emailRedirectTo = location.origin + location.pathname;
+
+        const { data, error } = await sb.auth.signUp({ email, password, options });
 
         if (error) return setMsg(box, authMessage(error));
 
@@ -1577,6 +1593,7 @@ $('recoverForm')?.addEventListener('submit', async event => {
     const email = $('recEmail').value.trim();
 
     if (!isEmail(email)) return setMsg($('recoverMsg'), 'Escribe un correo válido.');
+    if (!sb) return setMsg($('recoverMsg'), NO_SERVER_MSG);
 
     await withBusy(event.target.querySelector('button[type=submit]'), 'Enviando…', async () => {
         const options = location.protocol.startsWith('http')
